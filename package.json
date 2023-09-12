@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"svelte-i18n": "^3.7.4",
 		"svelte-routing": "^2.0.0"
 	}
 }
