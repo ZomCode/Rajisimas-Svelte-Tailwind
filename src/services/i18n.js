@@ -1,22 +1,30 @@
 import { dictionary, locale, _ } from "svelte-i18n";
+import { derived } from 'svelte/store';
 
-
-dictionary.set({
-    en:{
-        "header": {
-            "home": "Home",
-            "whereshop": "Where Shop?",
-            "about": "About"
+function setupI18n({
+    withLocale: _locale
+} = {
+        withLocale: 'es'
+    }) {
+    dictionary.set({
+        en: {
+            "header": {
+                "home": "Home",
+                "whereshop": "Where Shop?",
+                "about": "About"
+            }
+        },
+        es: {
+            "header": {
+                "home": "Inicio",
+                "whereshop": "¿Donde comprar?",
+                "about": "Nosotros"
+            }
         }
-    },
-    es:{
-        "header": {
-            "home": "Inicio",
-            "whereshop": "¿Donde comprar?",
-            "about": "Nosotros"
-        }
-    }
-});
-locale.set('en');
+    });
+    locale.set(_locale);
+}
 
-export {_};
+const isLocaleLoaded = derived(locale, $locale => typeof $locale === 'string');
+
+export { _, setupI18n, isLocaleLoaded};
