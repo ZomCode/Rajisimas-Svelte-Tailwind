@@ -2,7 +2,7 @@ import { dictionary, locale, _ } from "svelte-i18n";
 import { onMount } from 'svelte';
 import { derived } from 'svelte/store';
 
-const MESSAGE_FILE_URL_TEMPLATE = '../lang/{locale}.json';
+const MESSAGE_FILE_URL_TEMPLATE = 'lang/{locale}.json';
 
 function setupI18n({ withLocale: _locale } = { withLocale: 'es' }) {
     // Esta función se ejecutará después de que el componente se haya montado en el navegador
