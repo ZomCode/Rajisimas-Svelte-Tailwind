@@ -1,6 +1,6 @@
 <script>
-	import LogoR from '../img/LogoR.png';
-	import LetrasR from '../img/Letras.png';
+	import LogoR from '../../img/LogoR.png';
+	import LetrasR from '../../img/Letras.png';
 </script>
 
 <footer class="bg-gradient-to-t from-lime-900 to-lime-500">
