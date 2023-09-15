@@ -1,6 +1,7 @@
 <script>
-	import LogoR from '../img/LogoR.png';
-	import LetrasR from '../img/Letras.png';
+	import LetrasR from '../../img/Letras.png';
+
+	import { _ } from '../../services/i18n'
 </script>
 
 <footer class="bg-gradient-to-t from-lime-900 to-lime-500">
@@ -43,26 +44,26 @@
 		</div>
 		<div class="col-span-1 lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8 p-3 md:items-center">
 			<div class="col-span-1 h-full flex flex-col justify-around">
-				<p class="font-bold text-2xl">Secciones</p>
+				<p class="font-bold text-2xl">{$_('footer.titlesections')}</p>
 				<ul class="list-inside md:list-disc">
-					<li>Inicio</li>
-					<li>¿Dónde compra?</li>
-					<li>Nosotros</li>
+					<li>{$_('footer.sections.home')}</li>
+					<li>{$_('footer.sections.whereshop')}</li>
+					<li>{$_('footer.sections.about')}</li>
 				</ul>
 			</div>
 			<div class="col-span-1 h-full flex flex-col justify-around">
-				<p class="font-bold text-2xl">Soporte</p>
+				<p class="font-bold text-2xl">{$_('footer.titlesupport')}</p>
 				<ul class="md:list-disc">
-					<li>Politicas de privacidad</li>
-					<li>Terminos de uso</li>
+					<li>{$_('footer.support.privacy policies')}</li>
+					<li>{$_('footer.support.terms of use')}</li>
 				</ul>
 			</div>
 			<div class="col-span-2 md:col-span-1 h-full flex flex-col justify-around">
-				<p class="font-bold text-2xl">Contáctanos</p>
+				<p class="font-bold text-2xl">{$_('footer.title contact')}</p>
 				<p>
-					Ubicación <br>
-					Telefono: <br>
-					E-mail:
+					{$_('footer.contactInfo.location')}: <br>
+					{$_('footer.contactInfo.phone')}: <br>
+					{$_('footer.contactInfo.email')}:
 					<a href="mailto:contacto@rajismas.com.mx">contacto@rajisimas.com</a>
 				</p>
 			</div>

@@ -1,5 +1,6 @@
 <script>
 	import ProductCard2 from './productCard2.svelte';
+	import { _ } from 'svelte-i18n';
 	var Productos = 
 		[
 			{
@@ -26,8 +27,8 @@
 </script>
 
 <section class="bg-gray-200 dark:bg-gray-800 flex flex-col items-center gap-6 p-6">
-	<div class="dark:text-white font-bold text-5xl p-6">
-		CONOCE NUESTROS PRODUCTOS
+	<div class="dark:text-white font-bold text-5xl p-6 uppercase">
+		{$_('sectionsProducts')}
 	</div>
 	<ProductCard2 
 		ArrayProductos={Productos} 

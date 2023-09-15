@@ -10,8 +10,6 @@
 
 	function selectImage() {
 		selectedImage = imagenesSucursal[sucursal];
-    console.log(sucursal)
-    console.log(selectedImage)
 	}
 </script>
 

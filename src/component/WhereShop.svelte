@@ -9,7 +9,6 @@
 
 	function selectSucursal(event) {
 		selectedSucursal = event.target.value;
-		console.log(sucursalesData)
 	}
 </script>
 

@@ -1,6 +1,8 @@
 <script>
 	import RajisimasIMG from '../img/bgRajisimas.jpg';
 	import logoRajisimas from '../img/logoR.png';
+
+	import { _ } from 'svelte-i18n';
 </script>
 
 <section
@@ -27,7 +29,7 @@
 			p-3 w-[50%] lg:w-[40%] xl:w-[30%] h-auto mx-auto"
 		>
 			<img src={logoRajisimas} alt="Rajisimas" class="" />
-			<p class="w-full font-bold- text-2xl">Contacta con nosotros</p>
+			<p class="w-full font-bold- text-2xl">{$_('sectionContactUs')}</p>
 		</div>
 		<div class="grid gap-x-2 grid-cols-1 md:grid-cols-2 text-gray-700">
 			<div class="flex flex-col my-3">
