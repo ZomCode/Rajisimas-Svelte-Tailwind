@@ -12,6 +12,7 @@ function setupI18n({
                 "home": "Home",
                 "whereshop": "Where Shop?",
                 "about": "About"
+<<<<<<< HEAD
             },
             "footer": {
                 "title sections" : "Sections",
@@ -35,10 +36,14 @@ function setupI18n({
             "sectionsProducts" : "Explore our products",
             "sectionContactUs" : "Contact us"
 
+=======
+            }
+>>>>>>> 89779193b19175cfbac3629b77801e2603441d80
         },
         es: {
             "header": {
                 "home": "Inicio",
+<<<<<<< HEAD
                 "whereshop": "¿Dónde comprar?",
                 "about": "Nosotros"
             },
@@ -63,6 +68,11 @@ function setupI18n({
             },
             "sectionsProducts" : "Cónoce nuestros productos",
             "sectionContactUs" : "Contacta con nosotros"
+=======
+                "whereshop": "¿Donde comprar?",
+                "about": "Nosotros"
+            }
+>>>>>>> 89779193b19175cfbac3629b77801e2603441d80
         }
     });
     locale.set(_locale);
@@ -70,4 +80,8 @@ function setupI18n({
 
 const isLocaleLoaded = derived(locale, $locale => typeof $locale === 'string');
 
+<<<<<<< HEAD
 export { _ , setupI18n, isLocaleLoaded};
+=======
+export { _, setupI18n, isLocaleLoaded};
+>>>>>>> 89779193b19175cfbac3629b77801e2603441d80
