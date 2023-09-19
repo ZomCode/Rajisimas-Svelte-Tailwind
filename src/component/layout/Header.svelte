@@ -15,11 +15,11 @@
 <nav class="flex justify-between md:justify-around items-center bg-yellow-400 p-8 text-2xl">
 	<div class="flex items-center">
 		<Link to="/">
-			<img src={imgLogo} alt="LogoRajisimas" class="h-auto w-20" />
+			<img src={imgLogo} alt="LogoRajisimas" class="h-auto w-24" />
 		</Link>
-		<Link to="/">
-			<img src={LetrasR} alt="LogoRajisimas" class="h-auto w-20" />
-		</Link>
+		<!-- <Link to="/">
+			<img src={LetrasR} alt="LogoRajisimas" class="h-auto w-24" />
+		</Link> -->
 	</div>
 
 	<div class="md:hidden">

@@ -2,7 +2,7 @@
 	import Rajisimas from '../img/RAJISIMAS 460gr.png';
 	import Machisima from '../img/MACHISIMAS ARANDANO_150GR.png';
 	import WhereShop from '../component/WhereShop.svelte';
-
+	import { _ } from 'svelte-i18n';
 	let DefaultOpcion = "Oxxo"
 
 	let sucursales = [
@@ -177,6 +177,12 @@
 			]
 		}
 	];
+	let sucursalesUNAM = [
+		{
+			nombre: "UNAM",
+			sucursal: ['TIENDA UNAM']
+		}
+	]
 
 	let imgSucurChe = {
 		CRYSTAL: [Machisima, Rajisimas],
@@ -198,11 +204,15 @@
 		OXXO3: [Rajisimas],
 		OXXO4: [Machisima]
 	};
+
+	let imgTiendaUnam = {
+		"TIENDA UNAM" : [Rajisimas, Machisima]
+	}
 </script>
 
-<section class="flex flex-col py-4 gap-x-4 items-center md:justify-center bg-zinc-800">
-	<div class="flex items-center gap-x-3 font-bold text-4xl text-center text-white">
-		TIENDAS FÍSICAS
+<section class="flex flex-col py-4 gap-x-4 items-center md:justify-center dark:bg-zinc-800 bg-white">
+	<div class="flex items-center gap-x-3 font-bold text-4xl text-center dark:text-white text-black">
+		{$_('stores.titlePhysicalStores')}
 		<svg
 			class="w-6 h-6 text-gray-800 dark:text-white"
 			aria-hidden="true"
@@ -216,8 +226,12 @@
 		</svg>
 	</div>
 	<WhereShop sucursalesData={sucursalesChe} colorTitle={'text-orange-600'} images={imgSucurChe} Default={"CRYSTAL"}/>
-	<WhereShop sucursalesData={sucursalesOxxo} colorTitle={'text-yellow-600'} images={imgSucurOXXO} Default={DefaultOpcion}/>
+	<WhereShop sucursalesData={sucursalesOxxo} colorTitle={'text-yellow-500'} images={imgSucurOXXO} Default={DefaultOpcion}/>
+	<!-- <WhereShop sucursalesData={sucursalesUNAM} colorTitle={'text-gray-500'} images={imgTiendaUnam} Default={DefaultOpcion}/> -->
 	<div class="flex flex-col items-center">
-		<div class="font-bold text-4xl text-center text-white">TIENDAS EN LINEA</div>
+		<div class="font-bold text-4xl text-center text-white">{$_('stores.titleOnlineStores')}</div>
+	</div>
+	<div>
+		<p class="text-3xl font-bold uppercase text-yellow-400">Mercado Libre</p>
 	</div>
 </section>

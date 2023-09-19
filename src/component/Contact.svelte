@@ -29,7 +29,7 @@
 			p-3 w-[50%] lg:w-[40%] xl:w-[30%] h-auto mx-auto"
 		>
 			<img src={logoRajisimas} alt="Rajisimas" class="" />
-			<p class="w-full font-bold- text-2xl">{$_('sectionContactUs')}</p>
+			<p class="w-full font-bold- text-2xl">{$_('ContactUs.titleContactUs')}</p>
 		</div>
 		<div class="grid gap-x-2 grid-cols-1 md:grid-cols-2 text-gray-700">
 			<div class="flex flex-col my-3">
@@ -38,7 +38,7 @@
 					type="email"
 					name="correo"
 					id="correo"
-					placeholder="Correo electrónico*"
+					placeholder="{$_('ContactUs.email')}*"
 					class="
 						bg-transparent p-2
 						rounded-lg
@@ -58,7 +58,7 @@
 					type="tel"
 					name="telefono"
 					id="telefono"
-					placeholder="Teléfono"
+					placeholder="{$_('ContactUs.phone')}"
 					class="
 						bg-transparent p-2
 						rounded-lg
@@ -78,7 +78,7 @@
 					type="text"
 					name="asunto"
 					id="asunto"
-					placeholder="Asunto*"
+					placeholder="{$_('ContactUs.subject')}*"
 					class="
 						bg-transparent p-2
 						rounded-lg
@@ -98,7 +98,7 @@
 					type="text"
 					name="empresa"
 					id="empresa"
-					placeholder="Empresa*"
+					placeholder="{$_('ContactUs.company')}*"
 					class="
 						bg-transparent p-2
 						rounded-lg
@@ -119,7 +119,7 @@
 					id="Mensaje"
 					cols="30"
 					rows="5"
-					placeholder="Mensaje*"
+					placeholder="{$_('ContactUs.message')}*"
 					class="
 						bg-transparent p-2
 						rounded-lg

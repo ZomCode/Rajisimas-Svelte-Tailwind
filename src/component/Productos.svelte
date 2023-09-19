@@ -19,7 +19,7 @@
 			// {"Nombre": "Machísima", "Gramage": 150, "Sabor": false},
 			// {"Nombre": "Machísima", "Gramage": 150, "Sabor": "Arandano"},
 			{
-				"Nombre": "Arbolsímo", 
+				"Nombre": "Arbolísimo", 
 				"Gramage": [150], 
 				"Variante": false
 			},

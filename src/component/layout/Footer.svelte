@@ -44,7 +44,7 @@
 		</div>
 		<div class="col-span-1 lg:col-span-2 grid grid-cols-2 md:grid-cols-3 gap-8 p-3 md:items-center">
 			<div class="col-span-1 h-full flex flex-col justify-around">
-				<p class="font-bold text-2xl">{$_('footer.titlesections')}</p>
+				<p class="font-bold text-2xl">{$_('footer.titleSections')}</p>
 				<ul class="list-inside md:list-disc">
 					<li>{$_('footer.sections.home')}</li>
 					<li>{$_('footer.sections.whereshop')}</li>
@@ -52,14 +52,14 @@
 				</ul>
 			</div>
 			<div class="col-span-1 h-full flex flex-col justify-around">
-				<p class="font-bold text-2xl">{$_('footer.titlesupport')}</p>
+				<p class="font-bold text-2xl">{$_('footer.titleSupport')}</p>
 				<ul class="md:list-disc">
 					<li>{$_('footer.support.privacy policies')}</li>
 					<li>{$_('footer.support.terms of use')}</li>
 				</ul>
 			</div>
 			<div class="col-span-2 md:col-span-1 h-full flex flex-col justify-around">
-				<p class="font-bold text-2xl">{$_('footer.title contact')}</p>
+				<p class="font-bold text-2xl">{$_('footer.titleContact')}</p>
 				<p>
 					{$_('footer.contactInfo.location')}: <br>
 					{$_('footer.contactInfo.phone')}: <br>
@@ -70,6 +70,6 @@
 		</div>
 	</div>
 	<div class="text-center border-t border-green-800 py-2 text-base">
-		© 2022-2023 Rajísimas. All Rights Reserved.
+		© 2022-2023 Rajísimas. {$_('footer.rights')}.
 	</div>
 </footer>

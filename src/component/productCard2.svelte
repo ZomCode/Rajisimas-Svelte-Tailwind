@@ -24,7 +24,7 @@
 			font-bold italic text-4xl p-2 dark:text-dark text-white group-hover:text-yellow-400
 			border-y-2 group-hover:backdrop-blur-md group-hover:border-y-2 group-hover:border-yellow-400
 			transition-all duration-1000 ease-in-out
-			group-hover:-translate-x-[45rem] group-hover:scale-150
+			lg:group-hover:-translate-x-[38vw] group-hover:-translate-x-[25rem] group-hover:scale-150
 			"
 		>
 			{Producto.Nombre}

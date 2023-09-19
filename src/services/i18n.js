@@ -14,27 +14,40 @@ function setupI18n({
                 "about": "About"
             },
             "footer": {
-                "title sections" : "Sections",
+                "titleSections" : "Sections",
                 "sections" : {
                     "home": "Home",
                     "whereshop": "Where Shop?",
                     "about": "About"
                 },
-                "title support" : "Support",
+                "titleSupport" : "Support",
                 "support" : {
                     "privacy policies" : "Privacy policies",
                     "terms of use" : "Terms of use"
                 },
-                "title contact" : "Contact us",
+                "titleContact" : "Contact us",
                 "contactInfo" : {
                     "location" : "Location",
                     "phone" : "Phone",
                     "email" : "E-mail"
-                }
+                },
+                "rights" : "All rights reserved"
             },
             "sectionsProducts" : "Explore our products",
-            "sectionContactUs" : "Contact us"
-
+            "ContactUs" : {
+                "titleContactUs" : "Contact us",
+                "email" : "Email",
+                "phone" : "Phone",
+                "subject" : "Subjet",
+                "company" : "Company",
+                "message" : "Message"
+            },
+            "stores" : {
+                "titlePhysicalStores" : "Physical stores",
+                "titleOnlineStores" : "Online stores",
+                "branches" : "Branches",
+                "ask" : "What you can find here?"
+            }
         },
         es: {
             "header": {
@@ -43,26 +56,41 @@ function setupI18n({
                 "about": "Nosotros"
             },
             "footer": {
-                "title sections" : "Secciones",
+                "titleSections" : "Secciones",
                 "sections" : {
                     "home": "Inicio",
                     "whereshop": "¿Dónde comprar?",
                     "about": "Nosotros"
                 },
-                "title support" : "Soporte",
+                "titleSupport" : "Soporte",
                 "support" : {
-                    "privacy policies" : "Pólitas de privacidad",
+                    "privacy policies" : "Póliticas de privacidad",
                     "terms of use" : "Terminos de uso"
                 },
-                "title contact" : "Contactanos",
+                "titleContact" : "Contactanos",
                 "contactInfo" : {
                     "location" : "Ubicación",
                     "phone" : "Telefono",
                     "email" : "Correo Electronico"
-                }
+                },
+                "rights" : "Todos los derechos reservados"
             },
             "sectionsProducts" : "Cónoce nuestros productos",
-            "sectionContactUs" : "Contacta con nosotros"
+            "ContactUs" : {
+                "titleContactUs" : "Contacta con nosotros",
+                "email" : "Correo electrónico",
+                "phone" : "Teléfono",
+                "subject" : "Asunto",
+                "company" : "Empresa",
+                "message" : "Mensaje"
+            },
+            "stores" : {
+                "titlePhysicalStores" : "Tiendas Físicas",
+                "titleOnlineStores" : "Tiendas en Linea",
+                "branches" : "Sucursales",
+                "ask" : "¿Que puedes encontrar aquí?"
+            }
+
         }
     });
     locale.set(_locale);

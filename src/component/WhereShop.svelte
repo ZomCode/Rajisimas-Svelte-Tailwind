@@ -3,7 +3,8 @@
 	export let images = {};
 	export let colorTitle = '';
 	export let Default = '';
-
+	import { _ } from "svelte-i18n";
+	
 	let prefix = '';
 	let selectedSucursal = Default;
 
@@ -16,7 +17,7 @@
 	<p class="text-3xl font-bold uppercase {colorTitle}">{sucursalesData[0].nombre}</p>
 	<div class="grid md:grid-cols-2 gap-3 w-full">
 		<div class="flex flex-col items-center gap-2">
-			<p class="text-1xl text-slate-500">Sucursales</p>
+			<p class="text-1xl text-slate-500">{$_('stores.branches')}</p>
 			<input
 				placeholder="Nombre Sucursal"
 				bind:value={prefix}
@@ -34,7 +35,7 @@
 			</select>
 		</div>
 		<div class="flex flex-col items-center">
-			<p class="text-1xl text-slate-500 text-center">¿Qué puedes encontrar aquí?</p>
+			<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
 			<div class="group flex justify-evenly items-center w-40 rounded-xl h-full">
 				{#if selectedSucursal}
 					{#each images[selectedSucursal] as imagen}
