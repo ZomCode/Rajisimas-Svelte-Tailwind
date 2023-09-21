@@ -9,8 +9,8 @@
 	class="
     grid items-center
     bg-gradient-to-t from-slate-800 to-slate-300
-    h-[90vh] w-full bg-no-repeat bg-cover bg-center"
-	style="background-image: url({RajisimasIMG});"
+    h-[90vh] w-full bg-no-repeat bg-cover bg-center bg-[url('src/img/bgRajisimas.jpg')] dark:bg-gradient-to-t from-gray-600 to-gray-200"
+	
 >
 	<div
 		class="flex flex-col justify-center md:justify-evenly

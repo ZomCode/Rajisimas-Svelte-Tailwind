@@ -226,10 +226,12 @@
 		</svg>
 	</div>
 	<WhereShop sucursalesData={sucursalesChe} colorTitle={'text-orange-600'} images={imgSucurChe} Default={"CRYSTAL"}/>
-	<WhereShop sucursalesData={sucursalesOxxo} colorTitle={'text-yellow-500'} images={imgSucurOXXO} Default={DefaultOpcion}/>
-	<!-- <WhereShop sucursalesData={sucursalesUNAM} colorTitle={'text-gray-500'} images={imgTiendaUnam} Default={DefaultOpcion}/> -->
+	<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d101461.50280835017!2d-98.31447319912306!3d19.081946650279068!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1695147038530!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d52230.763791574864!2d-98.24109855710472!3d19.039116653867072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1soxxo!5e0!3m2!1ses-419!2smx!4v1695148876343!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
 	<div class="flex flex-col items-center">
-		<div class="font-bold text-4xl text-center text-white">{$_('stores.titleOnlineStores')}</div>
+		<div class="font-bold text-4xl text-center dark:text-white text-black">{$_('stores.titleOnlineStores')}</div>
+		<div>
+		</div>
 	</div>
 	<div>
 		<p class="text-3xl font-bold uppercase text-yellow-400">Mercado Libre</p>

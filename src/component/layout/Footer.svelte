@@ -10,9 +10,9 @@
 			<div class="w-[50%]">
 				<img src={LetrasR} alt="" />
 			</div>
-			<div class="flex items-center text-white py-3 dark:text-black">
+			<div class="flex items-center py-3 text-black dark:text-white">
 				<svg
-					class="w-6 h-6 text-gray-800 dark:text-white fill-black"
+					class="w-6 h-6 text-gray-800 dark:text-white"
 					aria-hidden="true"
 					xmlns="http://www.w3.org/2000/svg"
 					fill="currentColor"
@@ -26,7 +26,7 @@
 				</svg>
 				Facebook
 			</div>
-			<div class="flex items-center text-white py-3 dark:text-black">
+			<div class="flex items-center py-3 text-black dark:text-white">
 				<svg
 					class="w-6 h-6 text-gray-800 dark:text-white"
 					aria-hidden="true"
