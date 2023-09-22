@@ -9,12 +9,16 @@
 	import Footer from '../component/layout/Footer.svelte';
 	import Header from '../component/layout/Header.svelte';
 
+	import { fade } from "svelte/transition";
+
 	import { onMount } from 'svelte';
 	import { _, setupI18n, isLocaleLoaded } from '../services/i18n';
 	import { Router, Route } from 'svelte-routing';
 
 	let darkMode;
 	let darkModeReady = false;
+
+	export let url = "";
 
 	onMount(() => {
 		darkMode = document.documentElement.classList.contains('dark');
@@ -72,18 +76,18 @@
 		</div>
 	{/if}
 	
-	<Router>
+	<Router {url}>
 		<Header/>
 		<Route path="/">
 			<Home />
 		</Route>
-		<Route path="/Where">
-			<WhereShop />
+		<Route path="/Where" component={WhereShop}>
+			<!-- <WhereShop /> -->
 		</Route>
-		<Route path="/We">
-			<We />
+		<Route path="/We" component={We}>
+			<!-- <We /> -->
 		</Route>
-		<Route component={NotFound}></Route>
+		<Route path="*" component={NotFound}></Route>
 	</Router>
 	<Footer />
 {:else}
