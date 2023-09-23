@@ -12,18 +12,19 @@
 	let selectedSucursal = Default;
 	let showInput = true;
 
+	console.log(address);
+
 	function selectSucursal() {
 		// You can directly use selectedSucursal here if you remove the duplicate variable declaration.
 		// Example: selectedSucursal = prefix;
 	}
 
 	$: filteredSucursales = prefix
-		? sucursalesData.sucursales.filter((sucursal) =>
+		? sucursalesData[0].Nombre.filter((sucursal) =>
 				sucursal.toLowerCase().startsWith(prefix.toLowerCase())
 		  )
 		: sucursalesData.sucursales;
 
-	
 </script>
 
 <div class="flex flex-col items-center drop-shadow-md p-4 w-full">
@@ -43,9 +44,10 @@
 				class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 				bind:value={selectedSucursal}
 			>
-				{#each filteredSucursales as sucur (sucur)}
-					<option value={sucur} class="hover:bg-gray-300 uppercase">{sucur}</option>
+				{#each sucursalesData as {Nombre}}
+					<option value={Nombre} class="hover:bg-gray-300 uppercase">{Nombre}</option>
 				{/each}
+				
 			</select>
 		</div>
 		<div class="flex flex-col items-center">

@@ -1,10 +1,12 @@
 <script>
 	import { _ } from 'svelte-i18n';
-	import addressJson from '../services/Oxxo Rajisimas.json';
+	import chedahuiJson from '../Json/Chedrahui.json';
+	import oxxoJson from '../Json/Oxxo.json';
+	import unamJson from '../Json/Unam.json';
+
 	import WhereShop from '../component/WhereShop.svelte';
 	import Rajisimas from '../img/RAJISIMAS 460gr.png';
 	import Machisima from '../img/MACHISIMAS ARANDANO_150GR.png';
-
 
 	// Combine sucursal data and images into a single object or array.
 	let sucursalesChe = {
@@ -111,21 +113,21 @@
 	let stores = [
 		{
 			title: 'CHEDRAHUI',
-			sucursalesData: sucursalesChe,
+			sucursalesData: chedahuiJson,
 			colorTitle: 'text-orange-600',
 			images: imgSucurChe,
 			Default: 'CRYSTAL'
 		},
 		{
 			title: 'OXXO',
-			sucursalesData: sucursalesOxxo,
+			sucursalesData: oxxoJson,
 			colorTitle: 'text-yellow-400',
 			images: Machisima, // Set images as null or provide the appropriate data here.
 			Default: 'OXXO'
 		},
 		{
 			title: 'TIENDA UNAM',
-			sucursalesData: sucursalesUNAM,
+			sucursalesData: unamJson,
 			colorTitle: 'text-blue-400',
 			images: Rajisimas, // Set images as null or provide the appropriate data here.
 			Default: 'UNAM'
