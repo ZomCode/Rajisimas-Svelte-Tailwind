@@ -7,12 +7,11 @@
 	export let titleStore = '';
 	import { _ } from 'svelte-i18n';
 	import Machisima from '../img/MACHISIMAS ARANDANO_150GR.png';
+	import { onMount } from 'svelte';
 
 	let prefix = '';
 	let selectedSucursal = Default;
 	let showInput = true;
-
-	console.log(address);
 
 	function selectSucursal() {
 		// You can directly use selectedSucursal here if you remove the duplicate variable declaration.
@@ -20,11 +19,23 @@
 	}
 
 	$: filteredSucursales = prefix
-		? sucursalesData[0].Nombre.filter((sucursal) =>
+		? sucursalesData.Nombre.filter((sucursal) =>
 				sucursal.toLowerCase().startsWith(prefix.toLowerCase())
 		  )
 		: sucursalesData.sucursales;
 
+	let search = undefined;
+	let malls = [];
+	$: visibleMalls = search ?
+		users.filter(mall => {
+			return mall.Nombre.match(`${search}.*`) || mall.Nombre.match(`${search}.*`)
+	}) : malls;
+
+	onMount(async () => {
+		const resp = await fetch(sucursalesData)
+		const data = await resp.json();
+		users = data.results;
+	});
 </script>
 
 <div class="flex flex-col items-center drop-shadow-md p-4 w-full">
@@ -45,7 +56,7 @@
 				bind:value={selectedSucursal}
 			>
 				{#each sucursalesData as {Nombre}}
-					<option value={Nombre} class="hover:bg-gray-300 uppercase">{Nombre}</option>
+					<option value={Nombre} class="hover:bg-gray-300 uppercase" rows={visibleMalls} let:row={user}>{Nombre}</option>
 				{/each}
 				
 			</select>
