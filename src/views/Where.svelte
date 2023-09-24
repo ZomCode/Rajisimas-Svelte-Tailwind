@@ -1,10 +1,11 @@
 <script>
+	import WhereShop from '../component/WhereShop.svelte';
 	import { _ } from 'svelte-i18n';
+
 	import chedahuiJson from '../Json/Chedrahui.json';
 	import oxxoJson from '../Json/Oxxo.json';
 	import unamJson from '../Json/Unam.json';
 
-	import WhereShop from '../component/WhereShop.svelte';
 	import Rajisimas from '../img/RAJISIMAS 460gr.png';
 	import Machisima from '../img/MACHISIMAS ARANDANO_150GR.png';
 
@@ -98,16 +99,16 @@
 	};
 
 	let imgSucurChe = {
-		CRYSTAL: [Machisima, Rajisimas],
-		SELECTO: [Machisima, Rajisimas],
-		'CRUZ DEL SUR': [Machisima, Rajisimas],
-		EXPLANADA: [Machisima, Rajisimas],
-		'CENTRO SUR': [Machisima],
-		UPAEP: [Machisima],
-		XONACA: [Machisima],
-		ATLIXCO: [Rajisimas, Machisima],
-		TEZIUTLAN: [Machisima],
-		TEPEACA: [Machisima]
+		'Plaza Crystal': [Machisima, Rajisimas],
+		'Selecto Angelopolis': [Machisima, Rajisimas],
+		'Cruz del Sur': [Machisima, Rajisimas],
+		'Explanada Puebla': [Machisima, Rajisimas],
+		'Centro Sur': [Machisima],
+		'UPAEP': [Machisima],
+		'Xonaca': [Machisima],
+		'Atlixco': [Rajisimas, Machisima],
+		'Teziutlan': [Machisima],
+		'Tepeaca': [Machisima]
 	};
 
 	let stores = [
@@ -116,21 +117,24 @@
 			sucursalesData: chedahuiJson,
 			colorTitle: 'text-orange-600',
 			images: imgSucurChe,
-			Default: 'CRYSTAL'
+			default: '',
+			showInput: true
 		},
 		{
 			title: 'OXXO',
 			sucursalesData: oxxoJson,
 			colorTitle: 'text-yellow-400',
-			images: Machisima, // Set images as null or provide the appropriate data here.
-			Default: 'OXXO'
+			images: Machisima, 
+			default: '',
+			showInput: true
 		},
 		{
 			title: 'TIENDA UNAM',
 			sucursalesData: unamJson,
 			colorTitle: 'text-blue-400',
-			images: Rajisimas, // Set images as null or provide the appropriate data here.
-			Default: 'UNAM'
+			images: Rajisimas,
+			default: '',
+			showInput: false
 		}
 		// Add more stores here as needed.
 	];
@@ -148,17 +152,16 @@
 			fill="currentColor"
 			viewBox="0 0 16 20"
 		>
-			<!-- SVG path here -->
 		</svg>
 	</div>
 
 	{#each stores as store}
 		<WhereShop
-			titleStore={store.title}
-			sucursalesData={store.sucursalesData}
-			colorTitle={store.colorTitle}
-			images={store.images}
-			Default={store.Default}
+			titleStore = {store.title}
+			sucursalesData = {store.sucursalesData}
+			colorTitle = {store.colorTitle}
+			images = {store.images}
+			showInput = {store.showInput}
 		/>
 	{/each}
 
@@ -172,4 +175,25 @@
 	<div>
 		<p class="text-3xl font-bold uppercase text-yellow-300">Mercado Libre</p>
 	</div>
+	<div class="flex flex-col items-center drop-shadow-md p-4 w-full">
+		<div class="grid md:grid-cols-3 gap-3 w-full items-center">
+			<div class="flex flex-col items-center gap-2">
+				<a href="https://rajisimas.mercadoshops.com.mx/" target="_blank" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+					Comprar
+				</a> 
+			</div>
+			<div class="flex flex-col col-span-2 items-center">
+				<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
+				<div class="group flex justify-evenly items-center rounded-xl h-full">
+					<img src="{Machisima}" alt="{Machisima}" class="w-24">
+					<img src="{Machisima}" alt="{Machisima}" class="w-24">
+					<img src="{Machisima}" alt="{Machisima}" class="w-24">
+					<img src="{Machisima}" alt="{Machisima}" class="w-24">
+					<img src="{Machisima}" alt="{Machisima}" class="w-24">
+					<img src="{Machisima}" alt="{Machisima}" class="w-24">
+				</div>
+			</div>
+		</div>
+	</div>
+	
 </section>

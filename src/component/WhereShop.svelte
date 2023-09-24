@@ -1,82 +1,118 @@
 <script>
 	export let sucursalesData = [];
 	export let images = {};
-	export let colorTitle = '';
-	export let Default = '';
-	export let address = 'EXAMPLE';
-	export let titleStore = '';
+	export let colorTitle;
+	export let titleStore;
+	export let showInput;
+
 	import { _ } from 'svelte-i18n';
-	import Machisima from '../img/MACHISIMAS ARANDANO_150GR.png';
-	import { onMount } from 'svelte';
 
-	let prefix = '';
-	let selectedSucursal = Default;
-	let showInput = true;
+	let searchTerm = '';
+	$: selectedSucursal = '';
+	let address = '';
+	let url = '';
 
-	function selectSucursal() {
-		// You can directly use selectedSucursal here if you remove the duplicate variable declaration.
-		// Example: selectedSucursal = prefix;
+	function handleSelectChange(event) {
+		selectedSucursal = event.target.value;
+		const selectedData = sucursalesData.find((sucursal) => sucursal.Nombre === selectedSucursal);
+		address = selectedData.Direccion;
+		url = selectedData.Url;
+		console.log(selectedSucursal)
 	}
 
-	$: filteredSucursales = prefix
-		? sucursalesData.Nombre.filter((sucursal) =>
-				sucursal.toLowerCase().startsWith(prefix.toLowerCase())
-		  )
-		: sucursalesData.sucursales;
-
-	let search = undefined;
-	let malls = [];
-	$: visibleMalls = search ?
-		users.filter(mall => {
-			return mall.Nombre.match(`${search}.*`) || mall.Nombre.match(`${search}.*`)
-	}) : malls;
-
-	onMount(async () => {
-		const resp = await fetch(sucursalesData)
-		const data = await resp.json();
-		users = data.results;
-	});
+	function handleSearchInput() {
+		const foundSucursal = sucursalesData.find((sucursal) =>
+			sucursal.Nombre.toLowerCase().includes(searchTerm.toLowerCase())
+		);
+		if (foundSucursal) {
+			selectedSucursal = foundSucursal.Nombre;
+			address = foundSucursal.Direccion;
+			url = foundSucursal.Url;
+		} else {
+			// Si no se encuentra ninguna sucursal, puedes manejarlo aquí.
+			// Por ejemplo, mostrar un mensaje de error.
+			// selectedSucursal = '';
+			images = '';
+			address = 'Lo sentimos 😔';
+			url = '';
+		}
+	}
 </script>
 
 <div class="flex flex-col items-center drop-shadow-md p-4 w-full">
 	<p class="text-3xl font-bold uppercase {colorTitle}">{titleStore}</p>
-	<div class="grid md:grid-cols-2 gap-3 w-full items-center">
+	<div class="grid md:grid-cols-3 gap-3 w-full items-center">
 		<div class="flex flex-col items-center gap-2">
 			<p class="text-1xl text-slate-500">{$_('stores.branches')}</p>
 			{#if showInput}
 				<input
 					placeholder="Nombre Sucursal"
-					bind:value={prefix}
-					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					bind:value={searchTerm}
+					on:input={handleSearchInput}
+					class="
+						block w-full p-2.5 text-sm rounded-lg
+						bg-gray-50 border
+						border-gray-300
+						text-gray-900
+						focus:ring-blue-500
+						focus:border-blue-500
+						dark:bg-gray-700
+						dark:border-gray-600
+						dark:placeholder-gray-400
+						dark:text-white
+						dark:focus:ring-blue-500
+						dark:focus:border-blue-500
+					"
 				/>
 			{/if}
 			<select
 				size={5}
-				class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+				class="
+					block w-full p-2.5 text-sm rounded-lg
+					bg-gray-50 border
+					border-gray-300
+					text-gray-900
+					focus:ring-blue-500
+					focus:border-blue-500
+					dark:bg-gray-700
+					dark:border-gray-600
+					dark:placeholder-gray-400
+					dark:text-white
+					dark:focus:ring-blue-500
+					dark:focus:border-blue-500
+				"
 				bind:value={selectedSucursal}
+				on:change={handleSelectChange}
 			>
-				{#each sucursalesData as {Nombre}}
-					<option value={Nombre} class="hover:bg-gray-300 uppercase" rows={visibleMalls} let:row={user}>{Nombre}</option>
+				{#each sucursalesData as { Nombre }}
+					<option value={Nombre} class="hover:bg-gray-300 uppercase">{Nombre}</option>
 				{/each}
-				
 			</select>
 		</div>
-		<div class="flex flex-col items-center">
+		<div class="flex flex-col col-span-2 items-center">
 			<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
-			<div class="group flex justify-evenly items-center w-40 rounded-xl h-full">
+			<div class="group flex flex-col justify-evenly items-center rounded-xl h-full">
 				{#if typeof images === 'object'}
 					{#if selectedSucursal}
-						{#each images[selectedSucursal] as imagen}
-							<img src={imagen} alt={selectedSucursal} class="w-auto h-20" />
-						{/each}
+						<div class="flex justify-evenly transform transition ease-in-out">
+							{#each images[selectedSucursal] as imagen}
+								<img src={imagen} alt="Machisima" style="height: 10em;" />
+							{/each}
+						</div>
+						<a
+							href={url}
+							class="uppercase dark:text-white text-gray-700 font-bold dark:hover:text-yellow-500"
+							target="_blank"
+							>{address}</a
+						>
 					{:else}
 						<!-- Mostrar la imagen por defecto -->
-						<img src={images[selectedSucursal]} alt="Valor por defecto" class="w-auto h-20" />
+						<div class="block w-full">Espendo una opción 😁</div>
 					{/if}
 				{:else}
 					<div class="flex flex-col items-center">
-						<img src={images} alt="Machisima" />
-						<div class="uppercase dark:text-white text-black font-bold text-2xl">{address}</div>
+						<img src={images} alt="{images}" class="h-20" />
+						<a href={url} target="_blank" class="uppercase dark:text-white text-black font-bold">{address}</a>
 					</div>
 				{/if}
 			</div>
