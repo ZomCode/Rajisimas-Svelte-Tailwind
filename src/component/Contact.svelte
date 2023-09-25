@@ -1,5 +1,4 @@
 <script>
-	import RajisimasIMG from '../img/bgRajisimas.jpg';
 	import logoRajisimas from '../img/logoR.png';
 
 	import { _ } from 'svelte-i18n';
@@ -8,30 +7,28 @@
 <section
 	class="
     grid items-center
-    bg-gradient-to-t from-slate-800 to-slate-300
-    h-[90vh] w-full bg-no-repeat bg-cover bg-center bg-[url('src/img/bgRajisimas.jpg')] dark:bg-gradient-to-t from-gray-600 to-gray-200"
+    h-[100vh] w-full bg-no-repeat bg-cover bg-center bg-[url('src/img/bgRajisimas.jpg')] dark:bg-gradient-to-t from-gray-600 to-gray-200"
 	
 >
 	<div
-		class="flex flex-col justify-center md:justify-evenly
-        backdrop-blur-md
-        bg-opacity-50 rounded-lg
-        bg-gray-300
-        px-3 mx-auto
-        max-h-[90%] min-h-[60%]
-        max-w-[90%] md:max-w-[60%]
+		class="
+			flex flex-col items-center justify-evenly
+			backdrop-blur-md
+			bg-opacity-30 rounded-lg
+			bg-gray-300
+			p-4 mx-auto
+			h-[90vh]
         "
 	>
 		<div
 			class="
-			flex flex-col items-center justify-center
-			text-center
-			p-3 w-[50%] lg:w-[40%] xl:w-[30%] h-auto mx-auto"
+				flex flex-col items-center
+			"
 		>
-			<img src={logoRajisimas} alt="Rajisimas" class="" />
-			<p class="w-full font-bold- text-2xl">{$_('ContactUs.titleContactUs')}</p>
+			<img src={logoRajisimas} alt="Rajisimas" class="h-[40vw] md:[h-30vw] lg:h-[20vw]" />
+			<p class="font-bold- text-2xl">{$_('ContactUs.titleContactUs')}</p>
 		</div>
-		<div class="grid gap-x-2 grid-cols-1 md:grid-cols-2 text-gray-700">
+		<div class="grid gap-2 grid-cols-1 md:grid-cols-2 text-gray-700">
 			<div class="flex flex-col my-3">
 				<!-- <label for="correo" class="font-bold">Correo</label> -->
 				<input
@@ -112,13 +109,12 @@
 						placeholder:text-gray-600"
 				/>
 			</div>
-			<div class="flex flex-col my-3 md:col-span-2">
+			<div class="flex flex-col md:col-span-2">
 				<!-- <label for="descripcion" class="font-bold">Mensaje</label> -->
 				<textarea
 					name="Mensaje"
 					id="Mensaje"
-					cols="30"
-					rows="5"
+					rows="3"
 					placeholder="{$_('ContactUs.message')}*"
 					class="
 						bg-transparent p-2
@@ -131,7 +127,8 @@
 						focus:ring-lime-200
 						focus:border-transparent
 						placeholder:text-gray-600
-						resize-none"
+						resize-none
+					"
 				/>
 			</div>
 		</div>

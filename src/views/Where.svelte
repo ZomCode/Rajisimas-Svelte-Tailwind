@@ -178,13 +178,13 @@
 	<div class="flex flex-col items-center drop-shadow-md p-4 w-full">
 		<div class="grid md:grid-cols-3 gap-3 w-full items-center">
 			<div class="flex flex-col items-center gap-2">
-				<a href="https://rajisimas.mercadoshops.com.mx/" target="_blank" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">
+				<a href="https://rajisimas.mercadoshops.com.mx/" target="_blank" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold pb-2 px-4 rounded w-80 h-40 text-6xl grid place-items-center">
 					Comprar
 				</a> 
 			</div>
 			<div class="flex flex-col col-span-2 items-center">
 				<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
-				<div class="group flex justify-evenly items-center rounded-xl h-full">
+				<div class="flex flex-wrap justify-center gap-5 p-4 rounded-xl h-full">
 					<img src="{Machisima}" alt="{Machisima}" class="w-24">
 					<img src="{Machisima}" alt="{Machisima}" class="w-24">
 					<img src="{Machisima}" alt="{Machisima}" class="w-24">

@@ -10,8 +10,24 @@
 	const slides = [Rajisimas1, Arbolisimo1, LetrasR, Rajisimas1, Arbolisimo1];
 
 	function nextSlide() {
-		currentSlide = (currentSlide + 1) % slides.length;
+		// Obtén la imagen actual si existe en el DOM
+		const currentImage = document.querySelector(".slide-image");
+
+		if (currentImage) {
+			// Oculta la imagen actual
+			currentImage.classList.add("hidden");
+
+			// Incrementa el índice del slide actual (código para obtener el próximo slide)
+			currentSlide = (currentSlide + 1) % slides.length;
+
+			// Muestra la siguiente imagen después de un breve retraso para permitir la transición
+			setTimeout(() => {
+			currentImage.src = slides[currentSlide];
+			currentImage.classList.remove("hidden");
+			}, 500); // Este valor debe coincidir con la duración de la transición CSS
+		}
 	}
+
 
 	function prevSlide() {
 		currentSlide = (currentSlide - 1 + slides.length) % slides.length;
@@ -29,7 +45,7 @@
 <section class="relative">
 	<div class="block relative h-[40vw] md:h-[40vw] lg:h-[30vw] xl:h-[38vw]">
 		<img
-			class="absolute w-full h-full object-cover"
+			class="absolute w-full h-full slide-image"
 			src={slides[currentSlide]}
 			alt={`Slide ${currentSlide + 1}`}
 		/>
@@ -81,3 +97,9 @@
 		</button>
 	</div>
 </section>
+
+<style>
+	.slide-image {
+		transition: opacity 0.5s ease-in-out;
+	}
+</style>
