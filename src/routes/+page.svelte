@@ -9,8 +9,6 @@
 	import Footer from '../component/layout/Footer.svelte';
 	import Header from '../component/layout/Header.svelte';
 
-	import { fade } from "svelte/transition";
-
 	import { onMount } from 'svelte';
 	import { _, setupI18n, isLocaleLoaded } from '../services/i18n';
 	import { Router, Route } from 'svelte-routing';
@@ -29,7 +27,7 @@
 	let langReady = 'es';
 
 	$: if (!$isLocaleLoaded) {
-		setupI18n({ withLocale: 'es' });
+		setupI18n({ withLocale: langReady });
 	}
 
 	function changeLang() {
@@ -91,11 +89,11 @@
 	</Router>
 	<Footer />
 {:else}
-	<section class="grid place-items-center">Loading...</section>
+	<section class="h-screen grid place-items-center">Loading...</section>
 {/if}
 
 <style>
 	* {
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-family: Arial, Helvetica, sans-serif;
 	}
 </style>

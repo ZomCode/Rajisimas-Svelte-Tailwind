@@ -1,46 +1,70 @@
 <script>
-    import Rajisimas from '../img/LogoR.png'
+	import { Carousel } from 'flowbite-svelte';
+    import Rajisimas1 from '../img/RAJISIMAS 460gr.png';
+	import Rajisimas2 from '../img/OFICIAL 235gr.png';
+	const images = [
+        {
+            alt: 'Cosmic timetraveler',
+            src: Rajisimas1,
+            title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
+        },
+        {
+            alt: 'Cosmic timetraveler 2',
+            src: Rajisimas2,
+            title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
+        }
+    ]
+
+	let index = 0;
+	let image;
 </script>
 
-<section class="bg-gray-100 p-4 flex flex-col">
-    <div class="grid gap-2 grid-cols-3 px-10">
-        <div class="col-span-2 drop-shadow-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis numquam id, voluptatem assumenda beatae doloremque. Quaerat aliquam, fugit, tempore quidem exercitationem, maiores omnis minima quis odio sapiente quasi reiciendis voluptates.
+<section class="bg-gray-800 flex flex-col">
+	<article
+		class="
+            flex flex-col justify-center items-center
+            bg-[url('src/img/bgRajisimas.jpg')]
+            bg-no-repeat bg-cover bg-center
+            brightness-100
+            h-[95vh]
+            w-[100%]
+        "
+	>
+		<div
+			class="
+                flex flex-col justify-center items-center
+                h-full w-full
+                backdrop-brightness-50 backdrop-blur-sm bg-black/30
+            "
+		>
+			<h4
+				class="
+            text-4xl text-slate-500 font-semibold"
+			>
+				¿Rajísimas?
+			</h4>
+			<p
+				class="
+            m-0 w-[40vw] text-center text-white"
+			>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque obcaecati esse nulla aliquam
+				dolorum, atque dicta cumque amet impedit, eligendi incidunt debitis quibusdam quos eos vero.
+				Distinctio voluptatibus molestias officiis!
+			</p>
+		</div>
+	</article>
+
+	<article class="h-[100vh] w-full">
+        <Carousel {images} let:Indicators let:Controls on:change={({ detail }) => (image = detail)}>
+            <Controls />
+            <Indicators />
+        </Carousel>
+
+        <div class="rounded h-10 bg-gray-300 dark:bg-gray-700 dark:text-white p-2 my-2 text-center">
+            {image?.alt}
         </div>
-        <div class="col-span-1">
-            <img src="{Rajisimas}" alt="">
+        <div class="grid place-items-center">
+            HOLA
         </div>
-        <div class="col-span-2">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quaerat rerum sed. Non consequuntur asperiores minima cupiditate dolor accusamus sunt laudantium, modi, quod, voluptatibus corrupti! Eaque esse nihil harum quasi.
-        </div>
-        <div class="col-span-1">
-            <img src="{Rajisimas}" alt="">
-        </div>
-    </div>
-    <div class="flex justify-between gap-4">
-        <div class="text-center">
-            <div class="text-2xl font-bold">
-                MISIÓN
-            </div>
-            <p class="text-justify">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, reprehenderit reiciendis aspernatur voluptates quia obcaecati enim rem ratione fugiat, doloremque ut quisquam repellat at voluptate esse soluta, neque voluptatem atque.
-            </p>
-        </div>
-        <div class="text-center">
-            <div class="text-2xl font-bold">
-                VISIÓN
-            </div>
-            <p class="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum maiores sunt delectus rem suscipit assumenda esse aspernatur, laborum veniam, tempore asperiores accusamus consectetur voluptatum blanditiis consequuntur nemo fuga deleniti reiciendis.
-            </p>
-        </div>
-        <div class="text-center">
-            <div class="text-2xl font-bold">
-                VALORES
-            </div>
-            <p class="text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A facere atque officia, numquam consequatur reprehenderit eum labore voluptatum ea expedita modi corporis voluptatibus tenetur iure eligendi quam architecto cum neque!
-            </p>
-        </div>
-    </div>
+	</article>
 </section>

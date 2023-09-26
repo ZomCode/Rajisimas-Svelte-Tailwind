@@ -12,7 +12,7 @@
 	}
 </script>
 
-<nav class="flex justify-between md:justify-around items-center bg-yellow-400 p-8 text-2xl">
+<nav class="flex justify-between md:justify-around items-center bg-yellow-300 p-8 text-2xl">
 	<div class="flex items-center">
 		<Link to="/">
 			<img src={imgLogo} alt="LogoRajisimas" class="h-auto w-24" />
