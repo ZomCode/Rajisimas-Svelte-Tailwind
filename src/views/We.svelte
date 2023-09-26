@@ -1,19 +1,8 @@
 <script>
-	import { Carousel } from 'flowbite-svelte';
-    import Rajisimas1 from '../img/RAJISIMAS 460gr.png';
+    import { Img } from 'flowbite-svelte';
+
+	import Rajisimas1 from '../img/Rajisimas1.jpg';
 	import Rajisimas2 from '../img/OFICIAL 235gr.png';
-	const images = [
-        {
-            alt: 'Cosmic timetraveler',
-            src: Rajisimas1,
-            title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
-        },
-        {
-            alt: 'Cosmic timetraveler 2',
-            src: Rajisimas2,
-            title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
-        }
-    ]
 
 	let index = 0;
 	let image;
@@ -54,17 +43,31 @@
 		</div>
 	</article>
 
-	<article class="h-[100vh] w-full">
-        <Carousel {images} let:Indicators let:Controls on:change={({ detail }) => (image = detail)}>
-            <Controls />
-            <Indicators />
-        </Carousel>
-
-        <div class="rounded h-10 bg-gray-300 dark:bg-gray-700 dark:text-white p-2 my-2 text-center">
-            {image?.alt}
+	<article class="w-full text-white font-semibold p-20 grid grid-cols-1 md:grid-cols-3 gap-10 place-items-center">
+        <Img src="{Rajisimas1}" size="max-w-lg" class="col-span-1 md:col-span-2 rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"/>
+        <div class="col-span-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ducimus iure placeat
+            mollitia dolor ea inventore voluptates maiores ipsa. Dolores in maiores quaerat perferendis
+            eaque rerum harum ratione amet nihil.
         </div>
-        <div class="grid place-items-center">
-            HOLA
+
+        <div class="col-span-1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos eveniet repudiandae rem
+            quisquam illum vero eaque laudantium mollitia! Sequi quia totam fuga! Nulla sequi
+            dignissimos animi neque quae fuga rem.
+        </div>
+
+        <Img src="{Rajisimas1}" class="col-span-1 md:col-span-2 rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" />
+
+
+        <img src="{Rajisimas1}" alt="" class="col-span-1 md:col-span-2 border-8 rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+        <!-- <img src="{Rajisimas1}" alt="" class="rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 col-span-2"> -->
+        <!-- <Img src="{Rajisimas1}" size="max-w-lg" class="rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 col-span-2" /> -->
+        <div class="col-span-1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ea soluta! Illo aut
+            sequi eveniet dignissimos doloribus voluptatibus exercitationem ipsa, quisquam facere
+            veritatis laborum reiciendis et vel, nam adipisci beatae.
         </div>
 	</article>
+
 </section>

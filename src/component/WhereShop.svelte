@@ -1,6 +1,6 @@
 <script>
 	export let sucursalesData = [];
-	export let images = {};
+	export let images = [];
 	export let colorTitle;
 	export let titleStore;
 	export let showInput;
@@ -17,7 +17,6 @@
 		const selectedData = sucursalesData.find((sucursal) => sucursal.Nombre === selectedSucursal);
 		address = selectedData.Direccion;
 		url = selectedData.Url;
-		console.log(selectedSucursal)
 	}
 
 	function handleSearchInput() {
@@ -31,8 +30,7 @@
 		} else {
 			// Si no se encuentra ninguna sucursal, puedes manejarlo aquí.
 			// Por ejemplo, mostrar un mensaje de error.
-			// selectedSucursal = '';
-			images = '';
+			selectedSucursal = '';
 			address = 'Lo sentimos 😔';
 			url = '';
 		}
@@ -41,12 +39,12 @@
 
 <div class="flex flex-col items-center drop-shadow-md p-4 w-full">
 	<p class="text-3xl font-bold uppercase {colorTitle}">{titleStore}</p>
-	<div class="grid md:grid-cols-3 gap-3 w-full items-center">
-		<div class="flex flex-col items-center gap-2">
-			<p class="text-1xl text-slate-500">{$_('stores.branches')}</p>
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-3 w-full items-center mx-auto">
+		<div class="flex flex-col items-center gap-2 col-span-1">
+			<p class="text-1xl text-slate-500">{sucursalesData.length > 1 ? $_('stores.branches') : $_('stores.branch') }</p>
 			{#if showInput}
 				<input
-					placeholder="Nombre Sucursal"
+					placeholder={$_('stores.branchName')}
 					bind:value={searchTerm}
 					on:input={handleSearchInput}
 					class="
@@ -89,12 +87,12 @@
 				{/each}
 			</select>
 		</div>
-		<div class="flex flex-col col-span-2 items-center">
+		<div class="flex flex-col col-span-1 md:col-span-2 items-center">
 			<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
-			<div class="group flex flex-col justify-evenly items-center rounded-xl h-full">
+			<div class="flex flex-col justify-evenly items-center rounded-xl h-full">
 				{#if typeof images === 'object'}
 					{#if selectedSucursal}
-						<div class="flex justify-evenly transform transition ease-in-out">
+						<div class="flex justify-evenly animate-fade-down animate-once animate-ease-linear ">
 							{#each images[selectedSucursal] as imagen}
 								<img src={imagen} alt="Machisima" style="height: 10em;" />
 							{/each}
@@ -106,12 +104,11 @@
 							>{address}</a
 						>
 					{:else}
-						<!-- Mostrar la imagen por defecto -->
-						<div class="block w-full">Espendo una opción 😁</div>
+						<div class="text-slate-200 py-6">{$_('stores.waiting')}🤔😁</div>
 					{/if}
 				{:else}
 					<div class="flex flex-col items-center">
-						<img src={images} alt="{images}" class="h-20" />
+						<img src={images} alt="{images}" class="h-20 animate-fade-down animate-once animate-ease-linear" />
 						<a href={url} target="_blank" class="uppercase dark:text-white text-black font-bold">{address}</a>
 					</div>
 				{/if}

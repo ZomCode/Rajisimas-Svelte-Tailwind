@@ -45,8 +45,12 @@ function setupI18n({
             "stores" : {
                 "titlePhysicalStores" : "Physical stores",
                 "titleOnlineStores" : "Online stores",
+                "branch" : "Branch",
                 "branches" : "Branches",
-                "ask" : "What you can find here?"
+                "ask" : "What you can find here?",
+                "waiting" : "Waiting for an option",
+                "branchName" : "Branch Name",
+                "buy" : "Buy"
             }
         },
         es: {
@@ -87,8 +91,12 @@ function setupI18n({
             "stores" : {
                 "titlePhysicalStores" : "Tiendas Físicas",
                 "titleOnlineStores" : "Tiendas en Linea",
+                "branch" : "Sucursal",
                 "branches" : "Sucursales",
-                "ask" : "¿Que puedes encontrar aquí?"
+                "ask" : "¿Que puedes encontrar aquí?",
+                "waiting" : "Esperando una opción",
+                "branchName" : "Nombre Sucursal",
+                "buy" : "Comprar"
             }
 
         }

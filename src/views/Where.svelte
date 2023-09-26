@@ -9,95 +9,6 @@
 	import Rajisimas from '../img/RAJISIMAS 460gr.png';
 	import Machisima from '../img/MACHISIMAS ARANDANO_150GR.png';
 
-	// Combine sucursal data and images into a single object or array.
-	let sucursalesChe = {
-		sucursales: [
-			'CRYSTAL',
-			'SELECTO',
-			'CRUZ DEL SUR',
-			'EXPLANADA',
-			'CENTRO SUR',
-			'UPAEP',
-			'XONACA',
-			'ATLIXCO',
-			'TEZIUTLAN',
-			'TEPEACA'
-		]
-	};
-
-	let sucursalesOxxo = {
-		sucursales: [
-			'Geo del Sur',
-			'Magistral',
-			'117 Oriente',
-			'Sadasi',
-			'Heroes de Puebla II',
-			'Karpas Jardìn',
-			'España',
-			'El Portòn',
-			'Lomas del Marmol',
-			'Villas Carmel',
-			'Patrimonio',
-			'San Isidro',
-			'Geovillas',
-			'Oriòn',
-			'OXXO',
-			'Mateo del Regil',
-			'Plaza W',
-			'Pabellòn Atlixcayotl',
-			'Òpera',
-			'Sinfonìa',
-			'Gas Lomas',
-			'Lomas II',
-			'Lomas de Angelop',
-			'Aventura',
-			'Plaza del Arco',
-			'Hda. Santa Clara',
-			'Santa Isabel',
-			'Olivos',
-			'La Huerta',
-			'Plaza San Carlos',
-			'Xixitla',
-			'San Pedro',
-			'4 caminos',
-			'Jerusalèn',
-			'Rivadavia',
-			'Tlatempa',
-			'30 Poniente',
-			'Sindicato',
-			'Campanario',
-			'Cañada',
-			'Cumbres Barreal',
-			'Bello Horizonte',
-			'Maya Norte',
-			'Morillotla',
-			'Plaza Arcoiris',
-			'Itzel',
-			'Belo Horizonte',
-			'Oxxo',
-			'Casa Club',
-			'HaciendaSanCarlos',
-			'Floripa',
-			'El Marquès',
-			'El Rosal',
-			'San Juan',
-			'Bosques de Chapultepec',
-			'Nuevo Horizonte',
-			'del Valle',
-			'Real Campestre',
-			'Periferico Bosques',
-			'Xoxtla',
-			'Paseo Segovia',
-			'Segovia'
-		]
-	};
-
-	let sucursalesUNAM = {
-		sucursales: [
-			'UNAM'
-		]
-	};
-
 	let imgSucurChe = {
 		'Plaza Crystal': [Machisima, Rajisimas],
 		'Selecto Angelopolis': [Machisima, Rajisimas],
@@ -179,18 +90,18 @@
 		<div class="grid md:grid-cols-3 gap-3 w-full items-center">
 			<div class="flex flex-col items-center gap-2">
 				<a href="https://rajisimas.mercadoshops.com.mx/" target="_blank" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold pb-2 px-4 rounded w-80 h-40 text-6xl grid place-items-center">
-					Comprar
+					{$_('stores.buy')}
 				</a> 
 			</div>
 			<div class="flex flex-col col-span-2 items-center">
 				<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
-				<div class="flex flex-wrap justify-center gap-5 p-4 rounded-xl h-full">
-					<img src="{Machisima}" alt="{Machisima}" class="w-24">
-					<img src="{Machisima}" alt="{Machisima}" class="w-24">
-					<img src="{Machisima}" alt="{Machisima}" class="w-24">
-					<img src="{Machisima}" alt="{Machisima}" class="w-24">
-					<img src="{Machisima}" alt="{Machisima}" class="w-24">
-					<img src="{Machisima}" alt="{Machisima}" class="w-24">
+				<div class="flex flex-wrap justify-center gap-5 p-4 rounded-xl h-full [&>img]:w-24 animate-fade animate-once animate-ease-linear">
+					<img src="{Machisima}" alt="{Machisima}">
+					<img src="{Machisima}" alt="{Machisima}">
+					<img src="{Machisima}" alt="{Machisima}">
+					<img src="{Machisima}" alt="{Machisima}">
+					<img src="{Machisima}" alt="{Machisima}">
+					<img src="{Machisima}" alt="{Machisima}">
 				</div>
 			</div>
 		</div>

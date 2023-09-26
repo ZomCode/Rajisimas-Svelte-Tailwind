@@ -57,7 +57,7 @@
 	];
 </script>
 
-<section class="bg-gray-200 dark:bg-gray-800 flex flex-col items-center gap-6 p-6">
+<section class="bg-gray-200 dark:bg-gray-800 flex flex-col items-center gap-6 p-6 [&>div]:animate-fade-up animate-once animate-duration-1000 animate-delay-[50ms] animate-ease-in">
 	<div class="dark:text-white font-bold text-5xl p-6 uppercase">
 		{$_('sectionsProducts')}
 	</div>
