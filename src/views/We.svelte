@@ -1,10 +1,21 @@
 <script>
-    import { Img } from 'flowbite-svelte';
+	import { Img } from 'flowbite-svelte';
+	import { _ } from 'svelte-i18n';
 
 	import Rajisimas1 from '../img/Rajisimas1.webp';
+	import { onMount } from 'svelte';
+
+    let viewPort = window.innerWidth;
+    onMount(() => {
+        window.addEventListener('resize', () => {
+            viewPort = window.innerWidth;
+            console.log(viewPort);
+        });
+    });
+    
 </script>
 
-<section class="bg-gray-800 flex flex-col">
+<section class="dark:bg-gray-800 bg-gray-200 flex flex-col">
 	<article
 		class="
             flex flex-col justify-center items-center
@@ -39,31 +50,94 @@
 		</div>
 	</article>
 
-	<article class="w-full text-white font-semibold p-20 grid grid-cols-1 md:grid-cols-3 gap-10 place-items-center">
-        <Img src="{Rajisimas1}" size="max-w-lg" class="col-span-1 md:col-span-2 rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"/>
-        <div class="col-span-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ducimus iure placeat
-            mollitia dolor ea inventore voluptates maiores ipsa. Dolores in maiores quaerat perferendis
-            eaque rerum harum ratione amet nihil.
+	<article class="grid grid-cols-1 gap-4 p-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4 group">
+            <Img
+                src={Rajisimas1}
+                class="
+                    order-1
+                    col-span-1
+                    lg:col-span-2
+                    border rounded-lg shadow-md
+                    dark:border-white dark:shadow-gray-700 dark:group-hover:shadow-white
+                    border-black shadow-gray-400 group-hover:black
+                    transition-all duration-1000 ease-in-out
+                    cursor-pointer 
+                    filter grayscale group-hover:grayscale-0
+                "
+                caption="Co-Leader"
+            />
+            <div
+                class="
+                    order-last
+                    col-span-1
+                    md:flex md:items-center
+                    dark:text-white text-black font-semibold
+                "
+            >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ducimus iure placeat mollitia
+                dolor ea inventore voluptates maiores ipsa. Dolores in maiores quaerat perferendis eaque rerum
+                harum ratione amet nihil.
+            </div>
         </div>
-
-        <div class="col-span-1">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos eveniet repudiandae rem
-            quisquam illum vero eaque laudantium mollitia! Sequi quia totam fuga! Nulla sequi
-            dignissimos animi neque quae fuga rem.
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4 group">
+            <Img
+                src={Rajisimas1}
+                class="
+                    order-1
+                    md:order-2
+                    col-span-1
+                    lg:col-span-2
+                    border rounded-lg shadow-md
+                    dark:border-white dark:shadow-gray-700 dark:group-hover:shadow-white
+                    border-black shadow-gray-400 group-hover:black
+                    transition-all duration-1000 ease-in-out
+                    cursor-pointer 
+                    filter grayscale group-hover:grayscale-0
+                "
+            />
+            <div
+                class="
+                    order-2
+                    md:order-1
+                    col-span-1
+                    md:flex md:items-center
+                    dark:text-white text-black font-semibold
+                "
+            >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ducimus iure placeat mollitia
+                dolor ea inventore voluptates maiores ipsa. Dolores in maiores quaerat perferendis eaque rerum
+                harum ratione amet nihil.
+            </div>
         </div>
-
-        <Img src="{Rajisimas1}" class="col-span-1 md:col-span-2 rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" />
-
-
-        <img src="{Rajisimas1}" alt="" class="col-span-1 md:col-span-2 border-8 rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-        <!-- <img src="{Rajisimas1}" alt="" class="rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 col-span-2"> -->
-        <!-- <Img src="{Rajisimas1}" size="max-w-lg" class="rounded-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0 col-span-2" /> -->
-        <div class="col-span-1">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ea soluta! Illo aut
-            sequi eveniet dignissimos doloribus voluptatibus exercitationem ipsa, quisquam facere
-            veritatis laborum reiciendis et vel, nam adipisci beatae.
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4 group">
+            <Img
+                src={Rajisimas1}
+                class="
+                    order-1
+                    col-span-1
+                    lg:col-span-2
+                    border rounded-lg shadow-md
+                    dark:border-white dark:shadow-gray-700 dark:group-hover:shadow-white
+                    border-black shadow-gray-400 group-hover:black
+                    transition-all duration-1000 ease-in-out
+                    cursor-pointer 
+                    filter grayscale group-hover:grayscale-0
+                "
+            />
+            <div
+                class="
+                    order-2
+                    col-span-1
+                    md:flex md:items-center
+                    dark:text-white text-black font-semibold
+                "
+            >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ducimus iure placeat mollitia
+                dolor ea inventore voluptates maiores ipsa. Dolores in maiores quaerat perferendis eaque rerum
+                harum ratione amet nihil.
+            </div>
         </div>
+        
 	</article>
-
 </section>

@@ -1,6 +1,6 @@
 <script>
 	export let sucursalesData = [];
-	export let images = [];
+	export let images;
 	export let colorTitle;
 	export let titleStore;
 	export let showInput;
@@ -31,17 +31,21 @@
 			// Si no se encuentra ninguna sucursal, puedes manejarlo aquí.
 			// Por ejemplo, mostrar un mensaje de error.
 			selectedSucursal = '';
-			address = 'Lo sentimos 😔';
+			address = 'Lo sentimos no encontramos nada 😔';
 			url = '';
 		}
 	}
 </script>
 
-<div class="flex flex-col items-center drop-shadow-md p-4 w-full">
-	<p class="text-3xl font-bold uppercase {colorTitle}">{titleStore}</p>
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-3 w-full items-center mx-auto">
-		<div class="flex flex-col items-center gap-2 col-span-1">
-			<p class="text-1xl text-slate-500">{sucursalesData.length > 1 ? $_('stores.branches') : $_('stores.branch') }</p>
+<div class="group flex flex-col items-center drop-shadow-md p-4 w-full shadow-inner">
+	<div class="text-3xl font-bold uppercase {colorTitle}">
+		{titleStore}
+	</div>
+	<div class="grid justify-items-evenly grid-cols-1 md:grid-cols-3 gap-6 w-3/4">
+		<div class="flex flex-col items-center p-4 gap-2 col-span-1 shadow-xl rounded-lg">
+			<p class="text-1xl text-slate-500">
+				{sucursalesData.length > 1 ? $_('stores.branches') : $_('stores.branch')}
+			</p>
 			{#if showInput}
 				<input
 					placeholder={$_('stores.branchName')}
@@ -87,30 +91,55 @@
 				{/each}
 			</select>
 		</div>
-		<div class="flex flex-col col-span-1 md:col-span-2 items-center">
+		<div class="flex flex-col items-center gap-2 col-span-1 md:col-span-2 shadow-xl rounded-lg p-4 w-full">
 			<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
-			<div class="flex flex-col justify-evenly items-center rounded-xl h-full">
-				{#if typeof images === 'object'}
+			<div class="flex flex-col justify-evenly items-center rounded-xl h-full w-full">
+				{#if Array.isArray(images) === true}
+					<div class="flex justify-evenly w-full py-2">
+						{#each images as image}
+							<img
+								src={image}
+								alt={selectedSucursal}
+								class="animate-fade-down animate-once animate-ease-linear h-[10em]"
+							/>
+						{/each}
+					</div>
+					<a
+						href={url}
+						class="
+							text-1xl font-bold uppercase
+							dark:text-white text-black group-hover:text-gray-700 dark:group-hover:text-gray-400
+							animate-fade-down animate-once animate-ease-linear
+						"
+						target="_blank"
+					>
+						{address}
+					</a>
+				{:else if typeof images === 'object'}
 					{#if selectedSucursal}
-						<div class="flex justify-evenly animate-fade-down animate-once animate-ease-linear ">
+						<div class="flex justify-evenly flex-wrap w-full py-2">
 							{#each images[selectedSucursal] as imagen}
-								<img src={imagen} alt="Machisima" style="height: 10em;" />
+								<img
+									src={imagen}
+									alt={selectedSucursal}
+									class="animate-fade-down animate-once animate-ease-linear h-[10em]"
+								/>
 							{/each}
 						</div>
 						<a
 							href={url}
-							class="uppercase dark:text-white text-gray-700 font-bold dark:hover:text-yellow-500"
+							class="
+								text-1xl font-bold uppercase
+								dark:text-white text-black group-hover:text-gray-700 dark:group-hover:text-gray-400
+								animate-fade-down animate-once animate-ease-linear
+							"
 							target="_blank"
-							>{address}</a
 						>
+							{address}
+						</a>
 					{:else}
-						<div class="text-slate-200 py-6">{$_('stores.waiting')}🤔😁</div>
+						<div class="dark:text-white text-black py-6">{$_('stores.waiting')}🤔😁</div>
 					{/if}
-				{:else}
-					<div class="flex flex-col items-center">
-						<img src={images} alt="{images}" class="h-20 animate-fade-down animate-once animate-ease-linear" />
-						<a href={url} target="_blank" class="uppercase dark:text-white text-black font-bold">{address}</a>
-					</div>
 				{/if}
 			</div>
 		</div>

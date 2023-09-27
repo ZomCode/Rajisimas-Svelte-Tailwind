@@ -15,25 +15,32 @@
 
 	let darkMode;
 	let darkModeReady = false;
-
-	export let url = "";
-
+	let lang;
+	let langReady = 'es';
+	let url = '';
+	
 	onMount(() => {
 		darkMode = document.documentElement.classList.contains('dark');
 		darkModeReady = true;
 	});
 
-	let lang;
-	let langReady = 'es';
-
-	$: if (!$isLocaleLoaded) {
+	//cargar el idioma
+	if (!$isLocaleLoaded) {
 		setupI18n({ withLocale: langReady });
 	}
 
+	//funcion para cambiar el idioma
 	function changeLang() {
 		lang === true ? (langReady = 'en') : (langReady = 'es');
 		setupI18n({ withLocale: langReady });
 	}
+
+	//funcion para cambiar el tema
+	const changeTheme = () => {
+		darkMode = !darkMode;
+		document.documentElement.classList.toggle('dark');
+	};
+
 </script>
 
 <!-- switch Theme and Language -->
@@ -46,7 +53,7 @@
 						type="checkbox"
 						class="hidden"
 						bind:checked={darkMode}
-						on:change={() => document.documentElement.classList.toggle('dark')}
+						on:change={changeTheme}
 					/>
 					<div class="w-10 h-6 bg-gray-300 dark:bg-gray-800 rounded-full p-1">
 						<div
@@ -60,7 +67,11 @@
 			</div>
 			<div class="flex items-center space-x-2 px-4">
 				<label class="cursor-pointer">
-					<input type="checkbox" class="hidden" bind:checked={lang} on:change={changeLang} />
+					<input 
+						type="checkbox" 
+						class="hidden" 
+						bind:checked={lang} 
+						on:change={changeLang} />
 					<div class="w-10 h-6 bg-gray-300 dark:bg-gray-800 rounded-full p-1">
 						<div
 							class="bg-white dark:bg-gray-700 w-4 h-4 rounded-full shadow-md transform transition-transform duration-300"
