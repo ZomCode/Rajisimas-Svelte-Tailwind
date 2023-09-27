@@ -5,21 +5,21 @@
 
     import { Carousel } from 'flowbite-svelte';
 
-    import Rajisimas1 from '../img/Rajisimas1.jpg';
-	import Arbolisimo1 from '../img/Arbolisimo1.jpg';
+    import imgShowSlider1 from '../img/Rajisimas1.webp';
+	import imgShowSlider2 from '../img/Arbolisimo1.webp';
 
     const images = [
         {
             alt: 'Cosmic timetraveler',
-            src: Rajisimas1,
+            src: imgShowSlider1,
             title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
         },
         {
             alt: 'Cosmic timetraveler 2',
-            src: Arbolisimo1,
+            src: imgShowSlider2,
             title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
         }
-    ]
+    ];
 </script>
 
 <Carousel {images} duration={3000} let:Indicators let:Controls class="rounded-none max-h-[15vh] md:max-h-full animate-fade animate-once animate-duration-1000 animate-delay-[50ms] animate-ease-in">

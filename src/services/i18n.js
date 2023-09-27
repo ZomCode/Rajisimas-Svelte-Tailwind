@@ -51,6 +51,20 @@ function setupI18n({
                 "waiting" : "Waiting for an option",
                 "branchName" : "Branch Name",
                 "buy" : "Buy"
+            },
+            "we" : {
+                "mission" : {
+                    "tittleMission" : "Mision",
+                    "text" : "Text in English of Mission"
+                },
+                "vission" : {
+                    "tittleVission" : "Vision",
+                    "text" : "Text in English of Vission"
+                },
+                "values" : {
+                    "tittleValues" : "Values",
+                    "text" : "Text in English of Values"
+                }
             }
         },
         es: {
@@ -97,8 +111,21 @@ function setupI18n({
                 "waiting" : "Esperando una opción",
                 "branchName" : "Nombre Sucursal",
                 "buy" : "Comprar"
+            },
+            "we" : {
+                "mission" : {
+                    "tittleMission" : "Misión",
+                    "text" : "Texto en español de Misión"
+                },
+                "vission" : {
+                    "tittleVission" : "Visión",
+                    "text" : "Texto en español de Visión"
+                },
+                "values" : {
+                    "tittleValues" : "Valores",
+                    "text" : "Texto en español de Valores"
+                }
             }
-
         }
     });
     locale.set(_locale);

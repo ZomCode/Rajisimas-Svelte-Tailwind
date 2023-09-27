@@ -1,10 +1,10 @@
 <script>
-	import Rajisimas1 from '../img/RAJISIMAS 460gr.png';
-	import Rajisimas2 from '../img/OFICIAL 235gr.png';
-	import Machisima1 from '../img/RAJISIMAS 460gr.png';
-	import Machisima2 from '../img/OFICIAL 235gr.png';
-	import Machisima3 from '../img/RAJISIMAS 460gr.png';
-	import Arbolisimo from '../img/OFICIAL 235gr.png';
+	import Rajisimas1 from '../img/RAJISIMAS_460gr.webp';
+	import Rajisimas2 from '../img/RAJISIMAS_235gr.webp';
+	import Machisima1 from '../img/MACHISIMA_230gr.webp';
+	import Machisima2 from '../img/MACHISIMA_150gr.webp';
+	import Machisima3 from '../img/MACHISIMA ARANDANO_150gr.webp';
+	import Arbolisimo from '../img/ARBOLISIMO_340gr.webp';
 
 	import { _ } from 'svelte-i18n';
 
@@ -30,17 +30,17 @@
 				{
 					"Gramage": 230,
 					"Sabor": null,
-					"Img": Rajisimas1
+					"Img": Machisima1
 				},
 				{
 					"Gramage": 150,
 					"Sabor": null,
-					"Img": Rajisimas2
+					"Img": Machisima2
 				},
 				{
 					"Gramage": 150,
 					"Sabor": "Arandano",
-					"Img": Rajisimas2
+					"Img": Machisima3
 				}
 			]
 		},
@@ -50,7 +50,7 @@
 				{
 					"Gramage": 150,
 					"Sabor": null,
-					"Img": Rajisimas2
+					"Img": Arbolisimo
 				}
 			]
 		}

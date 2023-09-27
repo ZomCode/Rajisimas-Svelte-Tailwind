@@ -4,8 +4,8 @@
 
 	import { onMount } from 'svelte';
 	import LetrasR from '../img/Letras.png';
-	import Rajisimas1 from '../img/Rajisimas1.jpg';
-	import Arbolisimo1 from '../img/Arbolisimo1.jpg';
+	import Rajisimas1 from '../img/Rajisimas1.webp';
+	import Arbolisimo1 from '../img/Arbolisimo1.webp';
 
 	const slides = [Rajisimas1, Arbolisimo1, LetrasR, Rajisimas1, Arbolisimo1];
 

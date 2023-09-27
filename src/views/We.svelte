@@ -1,18 +1,14 @@
 <script>
     import { Img } from 'flowbite-svelte';
 
-	import Rajisimas1 from '../img/Rajisimas1.jpg';
-	import Rajisimas2 from '../img/OFICIAL 235gr.png';
-
-	let index = 0;
-	let image;
+	import Rajisimas1 from '../img/Rajisimas1.webp';
 </script>
 
 <section class="bg-gray-800 flex flex-col">
 	<article
 		class="
             flex flex-col justify-center items-center
-            bg-[url('src/img/bgRajisimas.jpg')]
+            bg-[url('src/img/bgRajisimas.webp')]
             bg-no-repeat bg-cover bg-center
             brightness-100
             h-[95vh]

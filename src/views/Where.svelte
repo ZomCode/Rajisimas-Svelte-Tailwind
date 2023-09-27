@@ -6,20 +6,24 @@
 	import oxxoJson from '../Json/Oxxo.json';
 	import unamJson from '../Json/Unam.json';
 
-	import Rajisimas from '../img/RAJISIMAS 460gr.png';
-	import Machisima from '../img/MACHISIMAS ARANDANO_150GR.png';
+	import Rajisimas1 from '../img/RAJISIMAS_460gr.webp';
+	import Rajisimas2 from '../img/RAJISIMAS_235gr.webp';
+	import Machisima1 from '../img/MACHISIMA_230gr.webp';
+	import Machisima2 from '../img/MACHISIMA_150gr.webp';
+	import Machisima3 from '../img/MACHISIMA ARANDANO_150gr.webp';
+	import Arbolisimo from '../img/ARBOLISIMO_340gr.webp';
 
 	let imgSucurChe = {
-		'Plaza Crystal': [Machisima, Rajisimas],
-		'Selecto Angelopolis': [Machisima, Rajisimas],
-		'Cruz del Sur': [Machisima, Rajisimas],
-		'Explanada Puebla': [Machisima, Rajisimas],
-		'Centro Sur': [Machisima],
-		'UPAEP': [Machisima],
-		'Xonaca': [Machisima],
-		'Atlixco': [Rajisimas, Machisima],
-		'Teziutlan': [Machisima],
-		'Tepeaca': [Machisima]
+		'Plaza Crystal': [Rajisimas2, Machisima2,Machisima3],
+		'Selecto Angelopolis': [Rajisimas2, Machisima2,Machisima3],
+		'Cruz del Sur': [Rajisimas2, Machisima2,Machisima3],
+		'Explanada Puebla': [Rajisimas2, Machisima2,Machisima3],
+		'Centro Sur': [Machisima2,Machisima3],
+		'UPAEP': [Machisima2,Machisima3],
+		'Xonaca': [Machisima2,Machisima3],
+		'Atlixco': [Rajisimas2, Machisima2,Machisima3],
+		'Teziutlan': [Machisima2,Machisima3],
+		'Tepeaca': [Machisima2,Machisima3]
 	};
 
 	let stores = [
@@ -35,7 +39,7 @@
 			title: 'OXXO',
 			sucursalesData: oxxoJson,
 			colorTitle: 'text-yellow-400',
-			images: Machisima, 
+			images: Rajisimas1, 
 			default: '',
 			showInput: true
 		},
@@ -43,7 +47,7 @@
 			title: 'TIENDA UNAM',
 			sucursalesData: unamJson,
 			colorTitle: 'text-blue-400',
-			images: Rajisimas,
+			images: Rajisimas1,
 			default: '',
 			showInput: false
 		}
@@ -96,12 +100,12 @@
 			<div class="flex flex-col col-span-2 items-center">
 				<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
 				<div class="flex flex-wrap justify-center gap-5 p-4 rounded-xl h-full [&>img]:w-24 animate-fade animate-once animate-ease-linear">
-					<img src="{Machisima}" alt="{Machisima}">
-					<img src="{Machisima}" alt="{Machisima}">
-					<img src="{Machisima}" alt="{Machisima}">
-					<img src="{Machisima}" alt="{Machisima}">
-					<img src="{Machisima}" alt="{Machisima}">
-					<img src="{Machisima}" alt="{Machisima}">
+					<img src="{Rajisimas1}" alt="{Rajisimas1}">
+					<img src="{Rajisimas2}" alt="{Rajisimas2}">
+					<img src="{Machisima1}" alt="{Machisima1}">
+					<img src="{Machisima2}" alt="{Machisima2}">
+					<img src="{Machisima3}" alt="{Machisima3}">
+					<img src="{Arbolisimo}" alt="{Arbolisimo}">
 				</div>
 			</div>
 		</div>

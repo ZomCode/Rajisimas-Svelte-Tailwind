@@ -1,5 +1,5 @@
 <script>
-	import logoRajisimas from '../img/logoR.png';
+	import logoRajisimas from '../img/logoR.webp';
 
 	import { _ } from 'svelte-i18n';
 </script>
@@ -7,7 +7,7 @@
 <section
 	class="
     grid items-center
-    h-[100vh] w-full bg-no-repeat bg-cover bg-center bg-[url('src/img/bgRajisimas.jpg')] dark:bg-gradient-to-t from-gray-600 to-gray-200"
+    h-[100vh] w-full bg-no-repeat bg-cover bg-center bg-[url('src/img/bgRajisimas.webp')] dark:bg-gradient-to-t from-gray-600 to-gray-200"
 >
 	<div
 		class="

@@ -6,8 +6,8 @@
 	import We from '../views/We.svelte';
 	import NotFound from '../views/NotFound.svelte';
 
-	import Footer from '../component/layout/Footer.svelte';
 	import Header from '../component/layout/Header.svelte';
+	import Footer from '../component/layout/Footer.svelte';
 
 	import { onMount } from 'svelte';
 	import { _, setupI18n, isLocaleLoaded } from '../services/i18n';
@@ -79,13 +79,15 @@
 		<Route path="/">
 			<Home />
 		</Route>
-		<Route path="/Where" component={WhereShop}>
-			<!-- <WhereShop /> -->
+		<Route path="/where" component={WhereShop}>
+			<WhereShop />
 		</Route>
-		<Route path="/We" component={We}>
+		<Route path="/we" component={We}>
 			<!-- <We /> -->
 		</Route>
-		<Route path="*" component={NotFound}></Route>
+		<Route path="*" component={NotFound}>
+			<NotFound/>
+		</Route>
 	</Router>
 	<Footer />
 {:else}
