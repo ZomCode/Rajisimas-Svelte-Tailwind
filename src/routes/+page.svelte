@@ -4,7 +4,7 @@
 	import Home from '../views/Home.svelte';
 	import WhereShop from '../views/Where.svelte';
 	import We from '../views/We.svelte';
-	import NotFound from '../views/NotFound.svelte';
+	import NotFound from '../views/404.svelte';
 
 	import Header from '../component/layout/Header.svelte';
 	import Footer from '../component/layout/Footer.svelte';

@@ -70,7 +70,9 @@
 				rounded-lg bg-slate-500
 				w-[90vw]
 				h-100%
+				efect-fade-up
 				"
+			
 		>
 			<div
 				class="
@@ -113,3 +115,28 @@
 		</div>
 	{/each}
 </section>
+
+<style>
+	@keyframes show {
+		from{
+			opacity: 0;
+			scale: 25%;
+		}
+
+		to{
+			opacity: 1;
+			scale: 100%;
+		}
+	}
+
+	.efect-fade-up{
+		view-timeline-name: --fadeUp;
+		view-timeline-axis: block;
+
+		animation-timeline: --fadeUp;
+		animation-name: show;
+
+		animation-range: entry 10% 	cover 40%;
+		animation-fill-mode: both;
+	}
+</style>

@@ -76,7 +76,7 @@
 		<div class="w-full text-center text-3xl font-bold uppercase text-yellow-300">
 			Mercado Libre
 		</div>
-		<div class="grid justify-items-evenly grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-3/4 h-auto">
+		<div class="grid justify-items-evenly grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-3/4 h-auto efect-fade-up">
 			<div class="flex justify-center items-center gap-2 col-span-1 md:col-span-2 lg:md:col-span-1 shadow-xl rounded-xl p-4">
 				<a
 					href="https://rajisimas.mercadoshops.com.mx/"
@@ -111,3 +111,28 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	@keyframes show {
+		from{
+			opacity: 0;
+			scale: 25%;
+		}
+
+		to{
+			opacity: 1;
+			scale: 100%;
+		}
+	}
+
+	.efect-fade-up{
+		view-timeline-name: --fadeUp;
+		view-timeline-axis: block;
+
+		animation-timeline: --fadeUp;
+		animation-name: show;
+
+		animation-range: entry 10% 	cover 40%;
+		animation-fill-mode: both;
+	}
+</style>
