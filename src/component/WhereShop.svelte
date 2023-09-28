@@ -37,7 +37,7 @@
 	}
 </script>
 
-<div class="group flex flex-col items-center drop-shadow-md p-4 w-full shadow-inner">
+<div class="group flex flex-col items-center drop-shadow-md p-4 w-full shadow-inner efect-fade-up">
 	<div class="text-3xl font-bold uppercase {colorTitle}">
 		{titleStore}
 	</div>
@@ -145,3 +145,28 @@
 		</div>
 	</div>
 </div>
+
+<style>
+	@keyframes show {
+		from{
+			opacity: 0;
+			scale: 25%;
+		}
+
+		to{
+			opacity: 1;
+			scale: 100%;
+		}
+	}
+
+	.efect-fade-up{
+		view-timeline-name: --fadeUp;
+		view-timeline-axis: block;
+
+		animation-timeline: --fadeUp;
+		animation-name: show;
+
+		animation-range: entry 30% 	cover 40%;
+		animation-fill-mode: both;
+	}
+</style>

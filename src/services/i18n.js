@@ -43,6 +43,7 @@ function setupI18n({
                 "message" : "Message"
             },
             "stores" : {
+                'titleSection' : "We have a great Chain of Self-Service Stores, Convenience Stores and University Stores, in which you can find our products.",
                 "titlePhysicalStores" : "Physical stores",
                 "titleOnlineStores" : "Online stores",
                 "branch" : "Branch",
@@ -103,6 +104,7 @@ function setupI18n({
                 "message" : "Mensaje"
             },
             "stores" : {
+                'titleSection' : "Contamos con una gran Cadena de Tiendas de Autoservicio, Tiendas de Conveniencia y Tiendas de Universidades, en las cuales podrás encontrar nuestros productos.",
                 "titlePhysicalStores" : "Tiendas Físicas",
                 "titleOnlineStores" : "Tiendas en Linea",
                 "branch" : "Sucursal",

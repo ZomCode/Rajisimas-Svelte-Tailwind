@@ -3,16 +3,6 @@
 	import { _ } from 'svelte-i18n';
 
 	import Rajisimas1 from '../img/Rajisimas1.webp';
-	import { onMount } from 'svelte';
-
-    let viewPort = window.innerWidth;
-    onMount(() => {
-        window.addEventListener('resize', () => {
-            viewPort = window.innerWidth;
-            console.log(viewPort);
-        });
-    });
-    
 </script>
 
 <section class="dark:bg-gray-800 bg-gray-200 flex flex-col">
@@ -22,7 +12,8 @@
             bg-[url('src/img/bgRajisimas.webp')]
             bg-no-repeat bg-cover bg-center
             brightness-100
-            h-[95vh]
+            min-h-[95vh]
+            h-[100vh]
             w-[100%]
         "
 	>
@@ -31,17 +22,24 @@
                 flex flex-col justify-center items-center
                 h-full w-full
                 backdrop-brightness-50 backdrop-blur-sm bg-black/30
+                gap-4
+                p-4
             "
 		>
 			<h4
 				class="
-            text-4xl text-slate-500 font-semibold"
+                    text-3xl md:text-7xl text-slate-500 font-semibold
+                "
 			>
 				¿Rajísimas?
 			</h4>
 			<p
 				class="
-            m-0 w-[40vw] text-center text-white"
+                    m-0 w-full md:w-[40vw]
+                    text-base md:text-3xl font-semibold
+                    text-white
+                    text-center
+                "
 			>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque obcaecati esse nulla aliquam
 				dolorum, atque dicta cumque amet impedit, eligendi incidunt debitis quibusdam quos eos vero.
