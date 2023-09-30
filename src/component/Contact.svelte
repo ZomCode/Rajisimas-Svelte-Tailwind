@@ -1,5 +1,6 @@
 <script>
 	import logoRajisimas from '../img/logoR.webp';
+	import { FloatingLabelInput, Helper } from 'flowbite-svelte';
 
 	import { _ } from 'svelte-i18n';
 
@@ -9,40 +10,26 @@
 	let company = '';
 	let message = '';
 
-	function enviarFormulario() {
-    // Captura los datos del formulario
-    const datosFormulario = {
-		email,
-		tel,
-		about,
-		company,
-		message
-    };
-
-	//Funcion para enviar el formulario
-	fetch('https://rajisimas.herokuapp.com/api/contact', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(datosFormulario)
-		})
-		.then(res => res.json())
-		.then(data => {
-			console.log(data);
-			alert('Mensaje enviado');
-		})
-		.catch(err => console.log(err));
-
-	});
-  }
+	
+	const enviarFormulario = () => {
+		if (email === '' || about === '' || company === '' || message === '') {
+			alert('Por favor, llene todos los campos');
+		} else {
+			alert('Gracias por contactarnos, te responderemos lo más pronto posible');
+			email = '';
+			tel = '';
+			about = '';
+			company = '';
+			message = '';
+		}
+	};
 </script>
 
 <section
 	class="
     grid items-center
-    h-[100vh] w-full 
-	bg-no-repeat bg-cover bg-center bg-[url('src/img/bgRajisimas.webp')] 
+    h-[100vh] w-full
+	bg-no-repeat bg-cover bg-center bg-[url('src/img/bgRajisimas.webp')]
 	dark:bg-gradient-to-t from-gray-600 to-gray-200"
 >
 	<div
@@ -63,7 +50,7 @@
 			<img src={logoRajisimas} alt="Rajisimas" class="h-[40vw] md:[h-30vw] lg:h-[20vw]" />
 			<p class="font-bold- text-2xl">{$_('ContactUs.titleContactUs')}</p>
 		</div>
-		<form>
+		<form action="https://formsubmit.co/rajisimasconsabor@gmail.com" method="POST">
 			<div class="grid gap-2 grid-cols-1 md:grid-cols-2 text-gray-700">
 				<div class="flex flex-col my-3">
 					<!-- <label for="correo" class="font-bold">Correo</label> -->
@@ -72,7 +59,7 @@
 						name="email"
 						id="email"
 						placeholder="{$_('ContactUs.email')}*"
-						bind:value={email} 
+						bind:value={email}
 						required
 						class="
 							bg-transparent p-2
@@ -88,13 +75,14 @@
 					/>
 				</div>
 				<div class="flex flex-col my-3">
-					<!-- <label for="telefono" class="font-bold">Télefono</label> -->
+					
 					<input
 						type="tel"
 						name="tel"
 						id="tel"
-						placeholder={$_('ContactUs.phone')}
-						bind:value={tel} 
+						placeholder="{$_('ContactUs.phone')}"
+						bind:value={tel}
+						accept="[0-1]"
 						required
 						class="
 							bg-transparent p-2
@@ -108,15 +96,16 @@
 							focus:border-transparent
 							placeholder:text-gray-600"
 					/>
+					<!-- <label for="telefono" class="font-bold group-hover:absolute group-hover:top-0">Télefono</label> -->
 				</div>
 				<div class="flex flex-col my-3">
 					<!-- <label for="asunto" class="font-bold">Asunto</label> -->
 					<input
 						type="text"
-						name="about"
-						id="about"
+						name="_subject"
+						id="_subject"
 						placeholder="{$_('ContactUs.subject')}*"
-						bind:value={about} 
+						bind:value={about}
 						required
 						class="
 							bg-transparent p-2
@@ -129,7 +118,6 @@
 							focus:ring-lime-200
 							focus:border-transparent
 							placeholder:text-gray-600"
-
 					/>
 				</div>
 				<div class="flex flex-col my-3">
@@ -139,7 +127,7 @@
 						name="company"
 						id="company"
 						placeholder="{$_('ContactUs.company')}*"
-						bind:value={company} 
+						bind:value={company}
 						required
 						class="
 							bg-transparent p-2
@@ -161,7 +149,7 @@
 						id="message"
 						rows="3"
 						placeholder="{$_('ContactUs.message')}*"
-						bind:value={message} 
+						bind:value={message}
 						required
 						class="
 							bg-transparent p-2
@@ -178,8 +166,8 @@
 						"
 					/>
 				</div>
-				<button 
-					type="button" 
+				<button
+					type="submit"
 					class="
 						col-span-1 md:col-span-2
 						rounded-full
@@ -193,7 +181,6 @@
 				>
 					Enviar
 				</button>
-
 			</div>
 		</form>
 	</div>
