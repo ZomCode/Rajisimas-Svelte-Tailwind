@@ -18,6 +18,7 @@
 		company,
 		message
     };
+	
 
     // Realiza una solicitud HTTP (por ejemplo, utilizando fetch) para enviar los datos al servidor
     fetch('/tu-servidor-de-procesamiento', {
@@ -183,7 +184,7 @@
 					/>
 				</div>
 				<button 
-					type="submit" 
+					type="button" 
 					class="
 						col-span-1 md:col-span-2
 						rounded-full
