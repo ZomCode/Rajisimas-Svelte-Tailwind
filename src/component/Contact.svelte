@@ -18,28 +18,23 @@
 		company,
 		message
     };
-	
 
-    // Realiza una solicitud HTTP (por ejemplo, utilizando fetch) para enviar los datos al servidor
-    fetch('/tu-servidor-de-procesamiento', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(datosFormulario)
-    })
-    .then(response => {
-      if (response.ok) {
-        // La solicitud se completó con éxito, puedes realizar acciones adicionales aquí
-        console.log('Formulario enviado con éxito');
-      } else {
-        // Manejar errores si es necesario
-        console.error('Error al enviar el formulario');
-      }
-    })
-    .catch(error => {
-      console.error('Error en la solicitud:', error);
-    });
+	//Funcion para enviar el formulario
+	fetch('https://rajisimas.herokuapp.com/api/contact', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(datosFormulario)
+		})
+		.then(res => res.json())
+		.then(data => {
+			console.log(data);
+			alert('Mensaje enviado');
+		})
+		.catch(err => console.log(err));
+
+	});
   }
 </script>
 
