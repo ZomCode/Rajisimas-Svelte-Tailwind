@@ -61,6 +61,7 @@
 						placeholder="{$_('ContactUs.email')}*"
 						bind:value={email}
 						required
+						autocomplete="email"
 						class="
 							bg-transparent p-2
 							rounded-lg
@@ -84,6 +85,7 @@
 						bind:value={tel}
 						accept="[0-1]"
 						required
+						autocomplete="tel"
 						class="
 							bg-transparent p-2
 							rounded-lg
@@ -129,6 +131,7 @@
 						placeholder="{$_('ContactUs.company')}*"
 						bind:value={company}
 						required
+						autocomplete="organization"
 						class="
 							bg-transparent p-2
 							rounded-lg

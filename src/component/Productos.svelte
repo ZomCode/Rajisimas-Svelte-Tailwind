@@ -57,7 +57,7 @@
 	];
 </script>
 
-<section class="bg-gray-200 dark:bg-gray-800 flex flex-col items-center gap-6 p-6 [&>div]:animate-fade-up animate-once animate-duration-1000 animate-delay-[50ms] animate-ease-in">
+<section class="bg-gray-200 dark:bg-zinc-800 flex flex-col items-center gap-6 p-6 [&>div]:animate-fade-up animate-once animate-duration-1000 animate-delay-[50ms] animate-ease-in">
 	<div class="dark:text-white font-bold text-4xl sm:text-5xl p-6 uppercase">
 		{$_('sectionsProducts')}
 	</div>
@@ -67,7 +67,7 @@
 			class="
 				group
 				flex justify-center items-center
-				rounded-lg bg-slate-500
+				rounded-lg bg-gray-500 dark:bg-zinc-700
 				w-[90vw]
 				h-100%
 				efect-fade-up
@@ -104,11 +104,11 @@
 						<img src={Img} alt="Rajisimas" class="h-40" />
 						{#if Sabor}
 							<div class="flex flex-col [&>p]:m-0">
-								<p class="text-slate-700 font-semibold">Sabor: {Sabor}</p>
-								<p class="text-slate-700 font-semibold">{Gramage}gr</p>
+								<p class="text-slate-700 dark:text-white font-semibold">Sabor: {Sabor}</p>
+								<p class="text-slate-700 dark:text-white font-semibold">{Gramage}gr</p>
 							</div>
 						{:else}
-							<p class="text-slate-700 font-semibold">{Gramage}gr</p>
+							<p class="text-slate-700 dark:text-white font-semibold">{Gramage}gr</p>
 						{/if}
 					</div>
 				{/each}

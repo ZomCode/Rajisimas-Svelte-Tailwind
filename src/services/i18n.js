@@ -132,7 +132,11 @@ function setupI18n({
     });
     locale.set(_locale);
 }
-
-const isLocaleLoaded = derived(locale, $locale => typeof $locale === 'string');
+const isLocaleLoaded = derived(locale, $locale => {
+    if (typeof $locale !== 'string') {
+        return;
+    }
+    document.querySelector('html').setAttribute('lang', $locale);
+});
 
 export { _ , setupI18n, isLocaleLoaded};

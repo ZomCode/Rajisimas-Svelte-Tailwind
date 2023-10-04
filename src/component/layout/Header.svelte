@@ -9,6 +9,10 @@
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
 	}
+
+	function getMenuIconPath(isOpen) {
+		return isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16';
+	}
 </script>
 
 <nav class="flex justify-between md:justify-around items-center bg-yellow-300 p-8 text-2xl">
@@ -16,9 +20,6 @@
 		<Link to="/">
 			<img src={imgLogo} alt="LogoRajisimas" class="h-auto w-24" />
 		</Link>
-		<!-- <Link to="/">
-			<img src={LetrasR} alt="LogoRajisimas" class="h-auto w-24" />
-		</Link> -->
 	</div>
 
 	<div class="md:hidden">
@@ -28,7 +29,7 @@
 					stroke-linecap="round"
 					stroke-linejoin="round"
 					stroke-width="2"
-					d={isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+					d={getMenuIconPath(isMenuOpen)}
 				/>
 			</svg>
 		</button>
@@ -42,11 +43,12 @@
 </nav>
 
 {#if isMenuOpen}
-	<div class="md:hidden transition-transform duration-500 ease-in-out font-bold text-1xl">
+	<div class="md:hidden transition-transform duration-1000 ease-in-out font-bold text-1xl">
 		<div class="flex flex-col space-y-4 p-4 bg-yellow-400">
-			<Link to="/" class="nav-link">{$_('header.home')}</Link>
-			<Link to="/where" class="nav-link">{$_('header.whereshop')}</Link>
-			<Link to="/we" class="nav-link">{$_('header.about')}</Link>
+			<Link to="/" class="nav-link" on:click={toggleMenu}>{$_('header.home')}</Link>
+			<Link to="/where" class="nav-link" on:click={toggleMenu}>{$_('header.whereshop')}</Link>
+			<Link to="/we" class="nav-link" on:click={toggleMenu}>{$_('header.about')}</Link>
 		</div>
 	</div>
 {/if}
+

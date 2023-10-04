@@ -24,10 +24,7 @@
 
 <Carousel {images} duration={3000} let:Indicators let:Controls class="rounded-none max-h-[15vh] md:max-h-full animate-fade animate-once animate-duration-1000 animate-delay-[50ms] animate-ease-in">
     <Controls/>
-  <!-- <a slot="slide" href="http://google.com/search?q={images[index].title}" target="_blank" let:Slide let:index>
-    <Slide image={images[index]} />
-  </a> -->
-    <Indicators />
+    <Indicators/>
 </Carousel>
 <!-- <ShowSlider></ShowSlider> -->
 <Productos></Productos>
