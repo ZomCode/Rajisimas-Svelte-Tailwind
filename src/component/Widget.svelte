@@ -1,9 +1,8 @@
 <script>
-	import { onMount } from 'svelte';
-    import { setupI18n, isLocaleLoaded } from '../services/i18n';
+    import { setupI18n } from '../services/i18n';
 
     let darkMode;
-	let darkModeReady = false;
+	let darkModeReady = true;
 
     let lang;
 	let langReady = 'es';
@@ -55,6 +54,6 @@
             </div>
         </label>
         <p />
-        <span class="text-slate-800 dark:text-gray-300"> {lang ? 'EN' : 'ES'}</span>
+        <span class="text-slate-800 dark:text-gray-300 font-semibold"> {lang ? 'EN' : 'ES'}</span>
     </div>
 </div>

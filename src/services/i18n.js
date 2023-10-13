@@ -33,7 +33,12 @@ function setupI18n({
                 },
                 "rights" : "All rights reserved"
             },
-            "sectionsProducts" : "Explore our products",
+            "home" : {
+                "title" : "Explore our products",
+                "rajisimasDescription" : "Slices of jalapeño, carrot, onion, spices. Uniquely with apple cider vinegar. Our grandmother's recipe, no artificial preservatives.",
+                "machisimaDescription" : "Macha sauce, a blend of 4 chilies, pumpkin seeds, peanuts, and sesame seeds. The sauce that goes with everything. No artificial preservatives.",
+                "arbolisimoDescription" : "Fried árbol chili, with spices. Perfect to accompany your broths. No artificial preservatives.",
+            },
             "ContactUs" : {
                 "titleContactUs" : "Contact us",
                 "email" : "Email",
@@ -56,15 +61,15 @@ function setupI18n({
             "we" : {
                 "mission" : {
                     "tittleMission" : "Mision",
-                    "text" : "Text in English of Mission"
+                    "text" : "Create healthy food products with great taste and tradition, making people's lives easier, integrating sustainable practices for our planet, based on a social economy model."
                 },
                 "vission" : {
                     "tittleVission" : "Vision",
-                    "text" : "Text in English of Vission"
+                    "text" : "To export our products starting in 2024, reaching more Latinos around the world, and conquering the nostalgia market."
                 },
                 "values" : {
                     "tittleValues" : "Values",
-                    "text" : "Text in English of Values"
+                    "text" : "JOY • HONESTY • RESPECT • JUSTICE • SOLIDARITY • EXCELLENCE • INNOVATION • TEAMWORK • SOCIAL RESPONSIBILITY"
                 }
             }
         },
@@ -94,7 +99,12 @@ function setupI18n({
                 },
                 "rights" : "Todos los derechos reservados"
             },
-            "sectionsProducts" : "Cónoce nuestros productos",
+            "home" : {
+                "title" : "Explora nuestros productos",
+                "rajisimasDescription" : "Rajas de jalapeño, zanahoria, cebolla, especias. Únicas con vinagre de manzana. Receta de nuestra abuela, sin conservadores artificiales.",
+                "machisimaDescription" : "Salsa macha, mezcla de 4 chiles, pepita, cacahuate y ajonjolí. La salsa que va con todo. Sin conservadores artificiales.",
+                "arbolisimoDescription" : "Chile de árbol frito, con especias. Perfecto para acompañar tus caldos. Sin conservadores artificiales.",
+            },
             "ContactUs" : {
                 "titleContactUs" : "Contacta con nosotros",
                 "email" : "Correo electrónico",
@@ -117,15 +127,15 @@ function setupI18n({
             "we" : {
                 "mission" : {
                     "tittleMission" : "Misión",
-                    "text" : "Texto en español de Misión"
+                    "text" : "Crear productos alimenticios saludables con gran sabor y tradición, facilitando la vida de las personas, integrando prácticas sostenibles para nuestro planeta, basándonos en un modelo de economía social."
                 },
                 "vission" : {
                     "tittleVission" : "Visión",
-                    "text" : "Texto en español de Visión"
+                    "text" : "Exportar nuestros productos a partir del 2024 llegando a más latinos alrededor del mundo, conquistando el mercado de la nostalgia"
                 },
                 "values" : {
                     "tittleValues" : "Valores",
-                    "text" : "Texto en español de Valores"
+                    "text" : "ALEGRÍA • HONESTIDAD • RESPETO • JUSTICIA • SOLIDARIDAD • EXCELENCIA • INNOVACIÓN • TRABAJO EN EQUIPO • RESPONSABILIDAD SOCIAL" 
                 }
             }
         }

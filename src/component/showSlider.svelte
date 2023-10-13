@@ -1,6 +1,5 @@
 <script>
 	let currentSlide = 0;
-	let interval;
 
 	import { onMount } from 'svelte';
 	import LetrasR from '../img/Letras.png';

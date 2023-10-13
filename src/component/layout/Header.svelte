@@ -9,10 +9,6 @@
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
 	}
-
-	function getMenuIconPath(isOpen) {
-		return isOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16';
-	}
 </script>
 
 <nav class="flex justify-between md:justify-around items-center bg-yellow-300 p-8 text-2xl">
@@ -29,21 +25,21 @@
 					stroke-linecap="round"
 					stroke-linejoin="round"
 					stroke-width="2"
-					d={getMenuIconPath(isMenuOpen)}
+					d={isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
 				/>
 			</svg>
 		</button>
 	</div>
 
-	<div class="hidden md:flex space-x-4 font-bold">
-		<Link to="/" class="nav-link hover:text-white">{$_('header.home')}</Link>
-		<Link to="/where" class="nav-link hover:text-white">{$_('header.whereshop')}</Link>
-		<Link to="/we" class=" hover:text-white">{$_('header.about')}</Link>
+	<div class="hidden md:flex gap-x-4 [&>a]:p-2 font-bold hover:[&>a]:text-white uppercase">
+		<Link to="/" class="nav-link">{$_('header.home')}</Link>
+		<Link to="/where" class="nav-link">{$_('header.whereshop')}</Link>
+		<Link to="/we" class="nav-link">{$_('header.about')}</Link>
 	</div>
 </nav>
 
 {#if isMenuOpen}
-	<div class="md:hidden transition-transform duration-1000 ease-in-out font-bold text-1xl">
+	<div class="md:hidden font-bold text-1xl hover:[&>a]:text-white">
 		<div class="flex flex-col space-y-4 p-4 bg-yellow-400">
 			<Link to="/" class="nav-link" on:click={toggleMenu}>{$_('header.home')}</Link>
 			<Link to="/where" class="nav-link" on:click={toggleMenu}>{$_('header.whereshop')}</Link>

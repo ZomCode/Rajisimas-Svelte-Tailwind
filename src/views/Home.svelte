@@ -1,5 +1,4 @@
 <script>
-    import ShowSlider from "../component/showSlider.svelte";
     import Productos from "../component/Productos.svelte";
     import Contact from "../component/Contact.svelte";
 
@@ -22,7 +21,13 @@
     ];
 </script>
 
-<Carousel {images} duration={3000} let:Indicators let:Controls class="rounded-none max-h-[15vh] md:max-h-full animate-fade animate-once animate-duration-1000 animate-delay-[50ms] animate-ease-in">
+<Carousel 
+    {images} 
+    duration={3000} 
+    let:Indicators 
+    let:Controls 
+    class="rounded-none max-h-[15vh] md:max-h-full animate-fade animate-once animate-duration-1000 animate-delay-[50ms] animate-ease-in"
+>
     <Controls/>
     <Indicators/>
 </Carousel>

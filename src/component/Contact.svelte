@@ -1,7 +1,4 @@
 <script>
-	import logoRajisimas from '../img/logoR.webp';
-	import { FloatingLabelInput, Helper } from 'flowbite-svelte';
-
 	import { _ } from 'svelte-i18n';
 
 	let email = '';
@@ -10,7 +7,6 @@
 	let company = '';
 	let message = '';
 
-	
 	const enviarFormulario = () => {
 		if (email === '' || about === '' || company === '' || message === '') {
 			alert('Por favor, llene todos los campos');
@@ -28,163 +24,170 @@
 <section
 	class="
     grid items-center
-    h-[100vh] w-full
+	min-h-min
 	bg-no-repeat bg-cover bg-center bg-[url('src/img/bgRajisimas.webp')]
-	dark:bg-gradient-to-t from-gray-600 to-gray-200"
+	dark:bg-gradient-to-b from-[#0F0F0F] to-green-800
+	"
 >
 	<div
 		class="
-			flex flex-col items-center justify-evenly
+			flex flex-col items-center
 			backdrop-blur-md
 			bg-opacity-30 rounded-lg
 			bg-gray-300
-			p-4 mx-auto
-			h-[90vh]
+			min-h-min
+			p-4 my-8 m-auto
+			w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw]
         "
 	>
 		<div
 			class="
-				flex flex-col items-center
+				flex flex-col items-center text-center
 			"
 		>
-			<img src={logoRajisimas} alt="Rajisimas" class="h-[40vw] md:[h-30vw] lg:h-[20vw]" />
-			<p class="font-bold- text-2xl">{$_('ContactUs.titleContactUs')}</p>
+			<!-- <img src={logoRajisimas} alt="Rajisimas" class="h-24" /> -->
+			<h4 class="font-bold- text-4xl text-black dark:text-white">
+				{$_('ContactUs.titleContactUs')}
+			</h4>
 		</div>
-		<form action="https://formsubmit.co/rajisimasconsabor@gmail.com" method="POST">
-			<div class="grid gap-2 grid-cols-1 md:grid-cols-2 text-gray-700">
-				<div class="flex flex-col my-3">
-					<!-- <label for="correo" class="font-bold">Correo</label> -->
-					<input
-						type="email"
-						name="email"
-						id="email"
-						placeholder="{$_('ContactUs.email')}*"
-						bind:value={email}
-						required
-						autocomplete="email"
-						class="
-							bg-transparent p-2
-							rounded-lg
-							border-2
-							border-gray-300
-							hover:border-lime-700
-							focus:outline-none
-							focus:ring
-							focus:ring-lime-200
-							focus:border-transparent
-							placeholder:text-gray-600"
-					/>
-				</div>
-				<div class="flex flex-col my-3">
+		<form
+			action="https://formsubmit.co/rajisimasconsabor@gmail.com"
+			method="POST"
+			class="
+				w-full 
+				grid grid-cols-1 md:grid-cols-2 gap-4 
+				text-black dark:text-white
+				[&>input]:w-full
+				md:[&>textarea]:col-span-2
+				[&>textarea]:w-full
+				place-items-center
+				[&>button]:col-span-1 md:[&>button]:col-span-2
+			"
+		>
+			<input
+				type="email"
+				name="email"
+				id="email"
+				placeholder="{$_('ContactUs.email')}*"
+				bind:value={email}
+				required
+				autocomplete="email"
+				class="
+					w-full
+					bg-transparent p-2
+					rounded-lg
+					border-2
+					border-gray-300
+					hover:border-lime-700
+					focus:outline-none
+					focus:ring
+					focus:ring-lime-200
+					focus:border-transparent
+					placeholder:text-gray-800 dark:placeholder:text-gray-400
+				"
+			/>
+			<input
+				type="tel"
+				name="tel"
+				id="tel"
+				placeholder={$_('ContactUs.phone')}
+				bind:value={tel}
+				accept="[0-9]"
+				required
+				autocomplete="tel"
+				class="
+					bg-transparent p-2
+					rounded-lg
+					border-2
+					border-gray-300
+					hover:border-lime-700
+					focus:outline-none
+					focus:ring
+					focus:ring-lime-200
+					focus:border-transparent
+					placeholder:text-gray-800 dark:placeholder:text-gray-400
+				"
+			/>
+			<input
+				type="text"
+				name="_subject"
+				id="_subject"
+				placeholder="{$_('ContactUs.subject')}*"
+				bind:value={about}
+				required
+				class="
+					bg-transparent p-2
+					rounded-lg
+					border-2
+					border-gray-300
+					hover:border-lime-700
+					focus:outline-none
+					focus:ring
+					focus:ring-lime-200
+					focus:border-transparent
+					placeholder:text-gray-800 dark:placeholder:text-gray-400
+				"
+			/>
+			<input
+				type="text"
+				name="company"
+				id="company"
+				placeholder="{$_('ContactUs.company')}*"
+				bind:value={company}
+				required
+				autocomplete="organization"
+				class="
+					bg-transparent p-2
+					rounded-lg
+					border-2
+					border-gray-300
+					hover:border-lime-700
+					focus:outline-none
+					focus:ring
+					focus:ring-lime-200
+					focus:border-transparent
+					placeholder:text-gray-800 dark:placeholder:text-gray-400
+				"
+			/>
+			<textarea
+				name="message"
+				id="message"
+				rows="3"
+				placeholder="{$_('ContactUs.message')}*"
+				bind:value={message}
+				required
+				class="
+					bg-transparent p-2
+					rounded-lg
+					border-2
+					border-gray-300
+					hover:border-lime-700
+					focus:outline-none
+					focus:ring
+					focus:ring-lime-200
+					focus:border-transparent
+					placeholder:text-gray-800 dark:placeholder:text-gray-400
+					resize-none
+				"
+			/>
+			<button
+				type="submit"
+				class="
+					flex justify-center
+					col-span-1 md:col-span-2
+					rounded-full
+					font-semibold
+					text-white
+					bg-gradient-to-r from-green-500 to-yellow-400
+					px-4 py-2 hover:ring-4 ring-offset-2 ring-offset-green-900 ring-lime-900 mt-2
+					w-1/2
+					md:w-1/4
 					
-					<input
-						type="tel"
-						name="tel"
-						id="tel"
-						placeholder="{$_('ContactUs.phone')}"
-						bind:value={tel}
-						accept="[0-1]"
-						required
-						autocomplete="tel"
-						class="
-							bg-transparent p-2
-							rounded-lg
-							border-2
-							border-gray-300
-							hover:border-lime-700
-							focus:outline-none
-							focus:ring
-							focus:ring-lime-200
-							focus:border-transparent
-							placeholder:text-gray-600"
-					/>
-					<!-- <label for="telefono" class="font-bold group-hover:absolute group-hover:top-0">Télefono</label> -->
-				</div>
-				<div class="flex flex-col my-3">
-					<!-- <label for="asunto" class="font-bold">Asunto</label> -->
-					<input
-						type="text"
-						name="_subject"
-						id="_subject"
-						placeholder="{$_('ContactUs.subject')}*"
-						bind:value={about}
-						required
-						class="
-							bg-transparent p-2
-							rounded-lg
-							border-2
-							border-gray-300
-							hover:border-lime-700
-							focus:outline-none
-							focus:ring
-							focus:ring-lime-200
-							focus:border-transparent
-							placeholder:text-gray-600"
-					/>
-				</div>
-				<div class="flex flex-col my-3">
-					<!-- <label for="empresa" class="font-bold">Empresa</label> -->
-					<input
-						type="text"
-						name="company"
-						id="company"
-						placeholder="{$_('ContactUs.company')}*"
-						bind:value={company}
-						required
-						autocomplete="organization"
-						class="
-							bg-transparent p-2
-							rounded-lg
-							border-2
-							border-gray-300
-							hover:border-lime-700
-							focus:outline-none
-							focus:ring
-							focus:ring-lime-200
-							focus:border-transparent
-							placeholder:text-gray-600"
-					/>
-				</div>
-				<div class="flex flex-col md:col-span-2">
-					<!-- <label for="descripcion" class="font-bold">Mensaje</label> -->
-					<textarea
-						name="message"
-						id="message"
-						rows="3"
-						placeholder="{$_('ContactUs.message')}*"
-						bind:value={message}
-						required
-						class="
-							bg-transparent p-2
-							rounded-lg
-							border-2
-							border-gray-300
-							hover:border-lime-700
-							focus:outline-none
-							focus:ring
-							focus:ring-lime-200
-							focus:border-transparent
-							placeholder:text-gray-600
-							resize-none
-						"
-					/>
-				</div>
-				<button
-					type="submit"
-					class="
-						col-span-1 md:col-span-2
-						rounded-full
-						font-semibold
-						text-white
-						bg-gradient-to-r from-green-500 to-yellow-400
-						
-						px-4 py-2 hover:ring-4 ring-offset-2 ring-offset-green-900 ring-lime-900 mt-2 text-center
-					"
-					on:click={enviarFormulario}
-				>
-					Enviar
-				</button>
-			</div>
+				"
+				on:click={enviarFormulario}
+			>
+				Enviar
+			</button>
 		</form>
 	</div>
 </section>

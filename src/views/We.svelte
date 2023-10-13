@@ -1,5 +1,4 @@
 <script>
-	import { Img } from 'flowbite-svelte';
 	import { _ } from 'svelte-i18n';
 
 	import Team1 from '../img/Team1.webp';
@@ -51,17 +50,26 @@
 		</div>
 	</article>
 
-	<article class="grid grid-cols-1 gap-4 p-10 [&>div>figure>img]:max-h-80 px-12 md:px-24">
-		<div class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 group">
+	<article 
+		class="
+			grid grid-cols-1 gap-4 py-10 px-12 md:px-24
+			[&>div>figure>img]:max-h-80 dark:text-white text-black
+		"
+	>
+		<div 
+			class="
+				grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 group
+			"
+		>
 			<figure
 				class="
-                order-1
-                
-                relative border rounded-lg shadow-md
-                dark:border-white dark:shadow-gray-700 dark:group-hover:shadow-white
-                border-black shadow-gray-400 group-hover:black
-                transition-all duration-1000 ease-in-out
-                filter grayscale group-hover:grayscale-0"
+					order-1
+					relative border rounded-lg shadow-md
+					dark:border-white dark:shadow-gray-700 dark:group-hover:shadow-white
+					border-black shadow-gray-400 group-hover:black
+					transition-all duration-1000 ease-in-out
+					filter grayscale group-hover:grayscale-0
+				"
 			>
 				<img class="h-auto rounded-lg" src="{Team1}" alt="sample 1" />
 				<figcaption class="absolute bottom-6 px-4 text-lg dark:text-white text-white">
@@ -73,25 +81,24 @@
                     order-last
                     col-span-1
                     md:flex md:items-center
-                    dark:text-white text-black
-                    text-center font-semibold select-none
+                    font-semibold select-none
+					group-hover:font-bold group-hover:scale-110
                 "
 			>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ducimus iure placeat
-				mollitia dolor ea inventore voluptates maiores ipsa. Dolores in maiores quaerat perferendis
-				eaque rerum harum ratione amet nihil.
+				{$_('we.mission.text')}
 			</div>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 group">
 			<figure
 				class="
-                order-1
-                md:order-2
-                relative border rounded-lg shadow-md
-                dark:border-white dark:shadow-gray-700 dark:group-hover:shadow-white
-                border-black shadow-gray-400 group-hover:black
-                transition-all duration-1000 ease-in-out
-                filter grayscale group-hover:grayscale-0"
+					order-1
+					md:order-2
+					relative border rounded-lg shadow-md
+					dark:border-white dark:shadow-gray-700 dark:group-hover:shadow-white
+					border-black shadow-gray-400 group-hover:black
+					transition-all duration-1000 ease-in-out
+					filter grayscale group-hover:grayscale-0
+				"
 			>
 				<img class="h-auto rounded-lg" src="{Team2}" alt="sample 1" />
 				<figcaption class="absolute bottom-6 px-4 text-lg dark:text-white text-white">
@@ -105,12 +112,10 @@
                     md:order-1
                     col-span-1
                     md:flex md:items-center
-                    dark:text-white text-black font-semibold select-none
+                    font-semibold select-none
                 "
 			>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ducimus iure placeat
-				mollitia dolor ea inventore voluptates maiores ipsa. Dolores in maiores quaerat perferendis
-				eaque rerum harum ratione amet nihil.
+				{$_('we.vission.text')}
 			</div>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 group">
@@ -133,12 +138,10 @@
                     order-2
                     col-span-1
                     md:flex md:items-center
-                    dark:text-white text-black font-semibold select-none
+                    font-semibold select-none
                 "
 			>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ducimus iure placeat
-				mollitia dolor ea inventore voluptates maiores ipsa. Dolores in maiores quaerat perferendis
-				eaque rerum harum ratione amet nihil.
+				{$_('we.values.text')}
 			</div>
 		</div>
 	</article>

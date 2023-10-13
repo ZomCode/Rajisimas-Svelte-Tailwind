@@ -1,5 +1,5 @@
 <script>
-	export let sucursalesData = [];
+	export let sucursalesData;
 	export let images;
 	export let colorTitle;
 	export let titleStore;
@@ -37,7 +37,7 @@
 	}
 </script>
 
-<div class="group flex flex-col items-center drop-shadow-md p-4 w-full shadow-inner efect-fade-up">
+<div class="flex flex-col items-center drop-shadow-md p-4 w-full shadow-inner efect-fade-up">
 	<div class="text-3xl font-bold uppercase {colorTitle}">
 		{titleStore}
 	</div>
@@ -51,6 +51,7 @@
 					placeholder={$_('stores.branchName')}
 					bind:value={searchTerm}
 					on:input={handleSearchInput}
+					autocomplete="address-level2"
 					class="
 						block w-full p-2.5 text-sm rounded-lg
 						bg-gray-50 border
@@ -58,7 +59,7 @@
 						text-gray-900
 						focus:ring-blue-500
 						focus:border-blue-500
-						dark:bg-gray-700
+						dark:bg-[#0F0F0F]
 						dark:border-gray-600
 						dark:placeholder-gray-400
 						dark:text-white
@@ -76,7 +77,7 @@
 					text-gray-900
 					focus:ring-blue-500
 					focus:border-blue-500
-					dark:bg-gray-700
+					dark:bg-[#0F0F0F]
 					dark:border-gray-600
 					dark:placeholder-gray-400
 					dark:text-white
@@ -91,7 +92,7 @@
 				{/each}
 			</select>
 		</div>
-		<div class="flex flex-col items-center gap-2 col-span-1 md:col-span-2 shadow-xl rounded-lg p-4 w-full">
+		<div class="group flex flex-col items-center gap-2 col-span-1 md:col-span-2 shadow-xl rounded-lg p-4 w-full">
 			<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
 			<div class="flex flex-col justify-evenly items-center rounded-xl h-full w-full">
 				{#if Array.isArray(images) === true}
@@ -108,13 +109,22 @@
 						href={url}
 						class="
 							text-1xl font-bold uppercase
-							dark:text-white text-black group-hover:text-gray-700 dark:group-hover:text-gray-400
+							dark:text-gray-400 dark:group-hover:text-white dark:group-hover:underline dark:group-hover:underline-offset-4
+							text-black group-hover:text-gray-700 group-hover:underline group-hover:underline-offset-4
 							animate-fade-down animate-once animate-ease-linear
 						"
 						target="_blank"
 					>
 						{address}
 					</a>
+					<p 
+						class="
+						text-slate-800 dark:text-slate-300
+						animate-fade animate-once animate-ease-linear
+						"	
+					>
+						(Puedes dar click sobre la direccion para ver en google maps)
+					</p>
 				{:else if typeof images === 'object'}
 					{#if selectedSucursal}
 						<div class="flex justify-evenly flex-wrap w-full py-2">
@@ -122,7 +132,7 @@
 								<img
 									src={imagen}
 									alt={selectedSucursal}
-									class="animate-fade-down animate-once animate-ease-linear h-[10em]"
+									class="animate-fade-up animate-once animate-ease-linear h-[10em]"
 								/>
 							{/each}
 						</div>
@@ -130,13 +140,22 @@
 							href={url}
 							class="
 								text-1xl font-bold uppercase
-								dark:text-white text-black group-hover:text-gray-700 dark:group-hover:text-gray-400
-								animate-fade-down animate-once animate-ease-linear
+								dark:text-gray-400 dark:group-hover:text-white dark:group-hover:underline dark:group-hover:underline-offset-4
+								text-black group-hover:text-gray-700 group-hover:underline group-hover:underline-offset-4
+								animate-fade-up animate-once animate-ease-linear
 							"
 							target="_blank"
 						>
 							{address}
 						</a>
+						<p 
+							class="
+							text-slate-800 dark:text-slate-300
+							animate-fade animate-once animate-ease-linear
+							"	
+						>
+							(Puedes dar click sobre la direccion para ver en google maps)
+						</p>
 					{:else}
 						<div class="dark:text-white text-black py-6">{$_('stores.waiting')}🤔😁</div>
 					{/if}
