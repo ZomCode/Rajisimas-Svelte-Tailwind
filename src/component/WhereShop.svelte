@@ -99,9 +99,10 @@
 					<div class="flex justify-evenly w-full py-2">
 						{#each images as image}
 							<img
+								loading="lazy"
 								src={image}
 								alt={selectedSucursal}
-								class="animate-fade-down animate-once animate-ease-linear h-[10em]"
+								class="animate-fade-down animate-once animate-ease-linear h-32 md:h-40"
 							/>
 						{/each}
 					</div>
@@ -130,9 +131,10 @@
 						<div class="flex justify-evenly flex-wrap w-full py-2">
 							{#each images[selectedSucursal] as imagen}
 								<img
+									loading="lazy"
 									src={imagen}
 									alt={selectedSucursal}
-									class="animate-fade-up animate-once animate-ease-linear h-[10em]"
+									class="animate-fade-up animate-once animate-ease-linear h-32 md:h-40"
 								/>
 							{/each}
 						</div>

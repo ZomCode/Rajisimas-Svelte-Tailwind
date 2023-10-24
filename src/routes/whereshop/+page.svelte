@@ -1,36 +1,36 @@
 <script>
-	import WhereShop from '../component/WhereShop.svelte';
+	import WhereShop from '../../component/WhereShop.svelte';
 	import { _ } from 'svelte-i18n';
 
-	import chedahuiJson from '../Json/Chedrahui.json';
-	import oxxoJson from '../Json/Oxxo.json';
-	import unamJson from '../Json/Unam.json';
+	import chedahuiJson from '../../Json/Chedrahui.json';
+	import oxxoJson from '../../Json/Oxxo.json';
+	import unamJson from '../../Json/Unam.json';
 
-	import Rajisimas1 from '../img/RAJISIMAS_460gr.webp';
-	import Rajisimas2 from '../img/RAJISIMAS_235gr.webp';
-	import Machisima1 from '../img/MACHISIMA_230gr.webp';
-	import Machisima2 from '../img/MACHISIMA_150gr.webp';
-	import Machisima3 from '../img/MACHISIMA ARANDANO_150gr.webp';
-	import Arbolisimo from '../img/ARBOLISIMO_340gr.webp';
+	import Rajisimas1 from '../../img/RAJISIMAS_460gr.webp';
+	import Rajisimas2 from '../../img/RAJISIMAS_235gr.webp';
+	import Machisima1 from '../../img/MACHISIMA_230gr.webp';
+	import Machisima2 from '../../img/MACHISIMA_150gr.webp';
+	import Machisima3 from '../../img/MACHISIMA ARANDANO_150gr.webp';
+	import Arbolisimo from '../../img/ARBOLISIMO_340gr.webp';
 
-	import LogoChedrahui from '../img/LogoOxxo.webp';
-	import LogoOxxo from '../img/LogoOxxo.webp';
-	import LogoUnam from '../img/LogoOxxo.webp';
+	import LogoChedrahui from '../../img/Logo_Cherdraui.svg';
+	import LogoOxxo from '../../img/Logo_Oxxo.svg';
+	import LogoUnam from '../../img/logoTU-sm.svg';
 
 	let imgSucurChe = {
-		'Plaza Crystal': [Rajisimas2, Machisima2, Machisima3],
-		'Selecto Angelopolis': [Rajisimas2, Machisima2, Machisima3],
-		'Cruz del Sur': [Rajisimas2, Machisima2, Machisima3],
-		'Explanada Puebla': [Rajisimas2, Machisima2, Machisima3],
-		'Centro Sur': [Machisima2, Machisima3],
-		UPAEP: [Machisima2, Machisima3],
-		Xonaca: [Machisima2, Machisima3],
-		Atlixco: [Rajisimas2, Machisima2, Machisima3],
-		Teziutlan: [Machisima2, Machisima3],
-		Tepeaca: [Machisima2, Machisima3]
+		'Plaza Crystal': [Rajisimas2, Machisima2],
+		'Selecto Angelopolis': [Rajisimas2, Machisima2],
+		'Cruz del Sur': [Rajisimas2, Machisima2],
+		'Explanada Puebla': [Rajisimas2, Machisima2],
+		'Centro Sur': [Machisima2],
+		UPAEP: [Machisima2],
+		Xonaca: [Machisima2],
+		Atlixco: [Rajisimas2, Machisima2],
+		Teziutlan: [Machisima2],
+		Tepeaca: [Machisima2]
 	};
 	let imgSucurOxxo = [
-		Machisima1, Machisima2
+		Machisima2, Machisima3
 	];
 	let imgSucurUnam = [
 		Rajisimas1, Machisima1
@@ -64,20 +64,20 @@
 
 <section class="flex flex-col items-center md:justify-center gap-y-4 dark:bg-[#0F0F0F] bg-white py-4 ">
 	<article class="h-auto md:h-[100vh] flex flex-col justify-evenly py-4">
-		<div class="font-bold text-2xl md:text-4xl text-center dark:text-white text-black mx-8 md:mx-12">
+		<h2 class="font-bold text-2xl md:text-4xl text-center dark:text-white text-black mx-8 md:mx-12">
 			{$_('stores.titleSection')}
-		</div>
-		<div class="flex items-center flex-wrap justify-evenly gap-4 w-full [&>img]:h-[8em] sm:[&>img]:min-h-[10em] p-4">
-			<img src="{LogoChedrahui}" alt="Logo Chedrahui">
-			<img src="{LogoOxxo}" alt="Logo Oxxo">
-			<img src="{LogoUnam}" alt="Logo Tienda Unam">
+		</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 place-items-center gap-4 w-full [&>img]:h-[8em] p-4">
+			<img loading="lazy" src="{LogoChedrahui}" alt="Logo Chedrahui" class="sm:min-h-[16em]">
+			<img loading="lazy" src="{LogoOxxo}" alt="Logo Oxxo" class="sm:min-h-[16em]">
+			<img loading="lazy" src="{LogoUnam}" alt="Logo Tienda Unam" class="sm:min-h-[1em] col-span-1 md:col-span-2">
 		</div>
 	</article>
 
 	<article class="flex flex-col w-full">
-		<div class="font-bold text-4xl text-center dark:text-white text-black efect-fade-up">
+		<h3 class="font-bold text-4xl text-center dark:text-white text-black efect-fade-up">
 			{$_('stores.titlePhysicalStores')}
-		</div>
+		</h3>
 	
 		{#each stores as store}
 			<WhereShop
@@ -89,13 +89,13 @@
 			/>
 		{/each}
 	
-		<div class="font-bold text-4xl text-center dark:text-white text-black w-full efect-fade-up">
+		<h4 class="font-bold text-4xl text-center dark:text-white text-black w-full efect-fade-up">
 			{$_('stores.titleOnlineStores')}
-		</div>
+		</h4>
 		<div class="flex flex-col items-center p-4 w-full efect-fade-up">
-			<div class="w-full text-center text-3xl font-bold uppercase text-yellow-300">
+			<h5 class="w-full text-center text-3xl font-bold uppercase text-yellow-300">
 				Mercado Libre
-			</div>
+			</h5>
 			<div class="grid justify-items-evenly grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-3/4 h-auto">
 				<div class="flex justify-center items-center gap-2 col-span-1 md:col-span-2 lg:md:col-span-1 shadow-xl rounded-xl p-4">
 					<a
@@ -103,8 +103,12 @@
 						target="_blank"
 						class="
 							grid place-items-center
-							bg-yellow-400 hover:bg-yellow-600 
+							bg-gradient-to-r from-[#de1f86] to-[#de1f86]
+							hover:from-[#de1f86] hover:to-[#911457]
 							text-white font-bold text-3xl
+
+							dark:text-black
+							
 							rounded-2xl
 							w-3/4 lg:h-1/4
 							pb-2 overflow-hidden
@@ -120,17 +124,18 @@
 					<div
 						class="
 							grid grid-cols-2 md:grid-cols-3 place-content-around place-items-center gap-2 md:gap-4 
-							rounded-xl 
-							[&>img]:w-[8em] sm:[&>img]:min-h-[10em]
+							rounded-xl
+							[&>img]:w-32 sm:[&>img]:min-h-40
 							animate-fade animate-once animate-ease-linear 
-							py-4 w-full"
+							py-4 w-full
+							"
 					>
-						<img src={Rajisimas1} alt={Rajisimas1} />
-						<img src={Rajisimas2} alt={Rajisimas2} />
-						<img src={Machisima1} alt={Machisima1} />
-						<img src={Machisima2} alt={Machisima2} />
-						<img src={Machisima3} alt={Machisima3} />
-						<img src={Arbolisimo} alt={Arbolisimo} />
+						<img loading="lazy" src={Rajisimas1} alt={Rajisimas1} />
+						<img loading="lazy" src={Rajisimas2} alt={Rajisimas2} />
+						<img loading="lazy" src={Machisima1} alt={Machisima1} />
+						<img loading="lazy" src={Machisima2} alt={Machisima2} />
+						<img loading="lazy" src={Machisima3} alt={Machisima3} />
+						<img loading="lazy" src={Arbolisimo} alt={Arbolisimo} />
 					</div>
 				</div>
 			</div>

@@ -1,38 +1,37 @@
 <script>
-	import '../app.css';
+    import Productos from "../component/Productos.svelte";
+    import Contact from "../component/Contact.svelte";
 
-	import Home from '../views/Home.svelte';
-	import WhereShop from '../views/Where.svelte';
-	import We from '../views/We.svelte';
-	import NotFound from '../views/404.svelte';
+    import { Carousel } from 'flowbite-svelte';
 
-	import Header from '../component/layout/Header.svelte';
-	import Widegt from '../component/Widget.svelte';
-	import Footer from '../component/layout/Footer.svelte';
+    import imgShowSlider1 from '../img/Rajisimas1.webp';
+	import imgShowSlider2 from '../img/Arbolisimo1.webp';
 
-	import { _, setupI18n } from '../services/i18n';
-	import { Router, Route } from 'svelte-routing';
 
-	let url = '';
-
-	setupI18n({ withLocale: 'es' });
+    const images = [
+        {
+            alt: 'Cosmic timetraveler',
+            src: imgShowSlider1,
+            title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
+        },
+        {
+            alt: 'Cosmic timetraveler 2',
+            src: imgShowSlider2,
+            title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
+        }
+    ];
 </script>
 
-
-<Router {url}>
-	<Widegt />
-	<Header />
-	<Route path="/">
-		<Home />
-	</Route>
-	<Route path="/where" component={WhereShop}>
-		<WhereShop />
-	</Route>
-	<Route path="/we" component={We}>
-		<!-- <We /> -->
-	</Route>
-	<Route path="*" component={NotFound}>
-		<NotFound />
-	</Route>
-</Router>
-<Footer />
+<Carousel 
+    {images} 
+    duration={3000} 
+    let:Indicators 
+    let:Controls 
+    class="rounded-none max-h-[15vh] md:max-h-full animate-fade animate-once animate-duration-1000 animate-delay-[50ms] animate-ease-in"
+>
+    <Controls/>
+    <Indicators/>
+</Carousel>
+<!-- <ShowSlider></ShowSlider> -->
+<Productos></Productos>
+<Contact></Contact>

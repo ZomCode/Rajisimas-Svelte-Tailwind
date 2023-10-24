@@ -1,5 +1,4 @@
 <script>
-	import { Link } from 'svelte-routing';
 	import { _ } from '../../services/i18n';
 
 	import imgLogo from '../../img/LogoR.webp';
@@ -13,9 +12,9 @@
 
 <nav class="flex justify-between md:justify-around items-center bg-yellow-300 p-8 text-2xl">
 	<div class="flex items-center">
-		<Link to="/">
+		<a href="/">
 			<img src={imgLogo} alt="LogoRajisimas" class="h-auto w-24" />
-		</Link>
+		</a>
 	</div>
 
 	<div class="md:hidden">
@@ -32,18 +31,18 @@
 	</div>
 
 	<div class="hidden md:flex gap-x-4 [&>a]:p-2 font-bold hover:[&>a]:text-white uppercase">
-		<Link to="/" class="nav-link">{$_('header.home')}</Link>
-		<Link to="/where" class="nav-link">{$_('header.whereshop')}</Link>
-		<Link to="/we" class="nav-link">{$_('header.about')}</Link>
+		<a href="/" class="nav-link">{$_('header.home')}</a>
+		<a href="/whereshop" class="nav-link">{$_('header.whereshop')}</a>
+		<a href="/about" class="nav-link">{$_('header.about')}</a>
 	</div>
 </nav>
 
 {#if isMenuOpen}
 	<div class="md:hidden font-bold text-1xl hover:[&>a]:text-white">
 		<div class="flex flex-col space-y-4 p-4 bg-yellow-400">
-			<Link to="/" class="nav-link" on:click={toggleMenu}>{$_('header.home')}</Link>
-			<Link to="/where" class="nav-link" on:click={toggleMenu}>{$_('header.whereshop')}</Link>
-			<Link to="/we" class="nav-link" on:click={toggleMenu}>{$_('header.about')}</Link>
+			<a href="/" class="nav-link" on:click={toggleMenu}>{$_('header.home')}</a>
+			<a href="/whereshop" class="nav-link" on:click={toggleMenu}>{$_('header.whereshop')}</a>
+			<a href="/about" class="nav-link" on:click={toggleMenu}>{$_('header.about')}</a>
 		</div>
 	</div>
 {/if}

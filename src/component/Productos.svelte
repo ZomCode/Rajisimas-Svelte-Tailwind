@@ -67,22 +67,23 @@
 		flex flex-col items-center 
 		gap-14 py-14 px-6
 		[&>div]:animate-fade-up animate-once animate-duration-1000 animate-ease-in
+		first:bg-red-900
 		"
 	>
-	<div class="dark:text-white font-bold text-4xl sm:text-5xl p-6 uppercase w-full text-center">
+	<h2 class="dark:text-white font-bold text-4xl sm:text-5xl p-6 uppercase w-full text-center">
 		{$_('home.title')}
-	</div>
+	</h2>
 
 	{#each Productos as {Nombre, Variantes, nombreDescription}}
-		<div
+		<article
 			class="
 				group
 				flex flex-col justify-center items-center
-				rounded-lg 
-				bg-gray-300 shadow-lg shadow-gray-800  
-				dark:bg-zinc-700 dark:shadow-gray-300
-				
-				min-w-[60vw]
+				rounded-lg
+				shadow-lg
+				bg-yellow-50 shadow-gray-800  
+				dark:bg-gray-600 dark:shadow-gray-600
+				min-w-[90vw] md:min-w-[80vw] lg:min-w-[70vw] xl:min-w-[60vw]
 				min-h-[45vh]
 				md:min-h-min
 				efect-fade-up
@@ -90,12 +91,13 @@
 			"
 			
 		>
-			<div
+			<h3
 				class="
 					absolute
 					text-center
-					font-bold italic text-4xl p-2 text-gray-900 dark:text-white group-hover:text-yellow-400
-					border-y-2 border-black dark:border-white group-hover:backdrop-blur-md group-hover:border-y-2 group-hover:border-yellow-400
+					font-bold italic text-4xl p-2 
+					text-gray-900 dark:text-white group-hover:text-rose-500
+					border-y-2 border-black dark:border-white group-hover:backdrop-blur-md group-hover:border-y-2 group-hover:border-black-400
 					transition-all duration-1000 ease-in-out
 					group-hover:-translate-x-[120vw]
 					md:group-hover:-translate-x-[30vw]
@@ -104,7 +106,7 @@
 				"
 			>
 				{Nombre}
-			</div>
+			</h3>
 			<p 
 				class="
 					text-gray-700 dark:text-gray-300 text-center font-semibold p-4
@@ -128,10 +130,10 @@
 				<!-- Itera sobre los tipos de gramaje y pos ibles variantes -->
 				{#each Variantes as {Gramage, Sabor, Img}}
 					<div class="flex items-center">
-						<img src={Img} alt="Rajisimas" class="h-40 hover:scale-110 transition-all ease-in-out duration-500" />
+						<img loading="lazy" src={Img} alt="Rajisimas" class="h-40 hover:scale-110 transition-all ease-in-out duration-500" />
 						{#if Sabor}
 							<div class="flex flex-col [&>p]:m-0">
-								<p class="text-slate-700 dark:text-white font-semibold">Sabor: {Sabor}</p>
+								<p class="text-slate-700 dark:text-white font-semibold">{$_('home.'+Nombre.toLocaleLowerCase()+Sabor.toLocaleLowerCase())}</p>
 								<p class="text-slate-700 dark:text-white font-semibold">{Gramage}gr</p>
 							</div>
 						{:else}
@@ -140,7 +142,7 @@
 					</div>
 				{/each}
 			</div>
-		</div>
+		</article>
 	{/each}
 </section>
 

@@ -38,6 +38,7 @@ function setupI18n({
                 "rajisimasDescription" : "Slices of jalapeño, carrot, onion, spices. Uniquely with apple cider vinegar. Our grandmother's recipe, no artificial preservatives.",
                 "machisimaDescription" : "Macha sauce, a blend of 4 chilies, pumpkin seeds, peanuts, and sesame seeds. The sauce that goes with everything. No artificial preservatives.",
                 "arbolisimoDescription" : "Fried árbol chili, with spices. Perfect to accompany your broths. No artificial preservatives.",
+                "machísimaarandano" : "Taste: Blueberry",
             },
             "ContactUs" : {
                 "titleContactUs" : "Contact us",
@@ -89,13 +90,13 @@ function setupI18n({
                 "titleSupport" : "Soporte",
                 "support" : {
                     "privacy policies" : "Póliticas de privacidad",
-                    "terms of use" : "Terminos de uso"
+                    "terms of use" : "Términos de uso"
                 },
                 "titleContact" : "Contactanos",
                 "contactInfo" : {
                     "location" : "Ubicación",
-                    "phone" : "Telefono",
-                    "email" : "Correo Electronico"
+                    "phone" : "Télefono",
+                    "email" : "Correo electrónico "
                 },
                 "rights" : "Todos los derechos reservados"
             },
@@ -104,6 +105,7 @@ function setupI18n({
                 "rajisimasDescription" : "Rajas de jalapeño, zanahoria, cebolla, especias. Únicas con vinagre de manzana. Receta de nuestra abuela, sin conservadores artificiales.",
                 "machisimaDescription" : "Salsa macha, mezcla de 4 chiles, pepita, cacahuate y ajonjolí. La salsa que va con todo. Sin conservadores artificiales.",
                 "arbolisimoDescription" : "Chile de árbol frito, con especias. Perfecto para acompañar tus caldos. Sin conservadores artificiales.",
+                "machísimaarandano" : "Sabor: Arandano"
             },
             "ContactUs" : {
                 "titleContactUs" : "Contacta con nosotros",
