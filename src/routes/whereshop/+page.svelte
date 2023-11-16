@@ -62,6 +62,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Rajísimas | {$_('header.whereshop')}</title>
+</svelte:head>
+
 <section class="flex flex-col items-center md:justify-center gap-y-4 dark:bg-[#0F0F0F] bg-white py-4 ">
 	<article class="h-auto md:h-[100vh] flex flex-col justify-evenly py-4">
 		<h2 class="font-bold text-2xl md:text-4xl text-center dark:text-white text-black mx-8 md:mx-12">
@@ -70,7 +74,7 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 place-items-center gap-4 w-full [&>img]:h-[8em] p-4">
 			<img loading="lazy" src="{LogoChedrahui}" alt="Logo Chedrahui" class="sm:min-h-[16em]">
 			<img loading="lazy" src="{LogoOxxo}" alt="Logo Oxxo" class="sm:min-h-[16em]">
-			<img loading="lazy" src="{LogoUnam}" alt="Logo Tienda Unam" class="sm:min-h-[1em] col-span-1 md:col-span-2">
+			<img loading="lazy" src="{LogoUnam}" alt="Logo Tienda Unam" class="sm:min-h-[1em] col-span-1 md:col-span-2 dark:bg-white p-2 rounded-lg">
 		</div>
 	</article>
 

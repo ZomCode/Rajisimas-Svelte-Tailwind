@@ -1,6 +1,7 @@
 <script>
     import Productos from "../component/Productos.svelte";
     import Contact from "../component/Contact.svelte";
+    import { _ } from 'svelte-i18n';
 
     import { Carousel } from 'flowbite-svelte';
 
@@ -22,6 +23,10 @@
     ];
 </script>
 
+<svelte:head>
+	<title>Rajísimas | {$_('header.home')}</title>
+</svelte:head>
+
 <Carousel 
     {images} 
     duration={3000} 
@@ -32,6 +37,5 @@
     <Controls/>
     <Indicators/>
 </Carousel>
-<!-- <ShowSlider></ShowSlider> -->
-<Productos></Productos>
-<Contact></Contact>
+<Productos/>
+<Contact/>

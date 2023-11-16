@@ -10,7 +10,7 @@
     <h2 class="uppercase w-full h-[30vh] bg-green-600 grid place-items-center text-center text-4xl font-bold">
         Políticas de privacidad
     </h2>
-    <p>
+    <p class="p-4">
         Gracias por visitar www.rajisimas.com. Tu privacidad es importante para nosotros, y nos comprometemos a proteger tus datos personales. 
         <br>
         Esta Política de Privacidad describe cómo recopilamos, utilizamos y compartimos la información que recopilamos de los usuarios de nuestro sitio web.

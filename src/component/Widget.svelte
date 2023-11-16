@@ -20,7 +20,7 @@
 	};
 </script>
 
-<div class="absolute flex p-2 md:p-4 bg-green-600 right-2 rounded-b-xl divide-x">
+<div class="fixed z-20 flex p-2 md:p-4 right-4 max-w-min bg-green-600 rounded-b-xl divide-x">
     <div class="flex items-center space-x-2 px-4">
         <label class="cursor-pointer">
             <input
@@ -29,9 +29,9 @@
                 bind:checked={darkMode}
                 on:change={changeTheme}
             />
-            <div class="w-10 h-6 bg-gray-300 dark:bg-gray-800 rounded-full p-1">
+            <div class="w-10 h-6 bg-gray-300 dark:bg-[#0F0F0F] rounded-full p-1">
                 <div
-                    class="bg-white dark:bg-gray-700 w-4 h-4 rounded-full shadow-md transform transition-transform duration-300"
+                    class="bg-white dark:bg-gray-800 w-4 h-4 rounded-full shadow-md transform transition-transform duration-300"
                     style="transform: translateX({darkMode ? '100%' : '0'})"
                 />
             </div>
@@ -46,9 +46,9 @@
                 class="hidden" 
                 bind:checked={lang} 
                 on:change={changeLang} />
-            <div class="w-10 h-6 bg-gray-300 dark:bg-gray-800 rounded-full p-1">
+            <div class="w-10 h-6 bg-gray-300 dark:bg-[#0F0F0F] rounded-full p-1">
                 <div
-                    class="bg-white dark:bg-gray-700 w-4 h-4 rounded-full shadow-md transform transition-transform duration-300"
+                    class="bg-white dark:bg-gray-800 w-4 h-4 rounded-full shadow-md transform transition-transform duration-300"
                     style="transform: translateX({lang ? '100%' : '0'})"
                 />
             </div>

@@ -6,14 +6,14 @@
 	import Footer from '../component/layout/Footer.svelte';
 
 	import { _ , setupI18n } from '../services/i18n';
-	import FloatWa from '../component/FloatWA.svelte';
+	import FloatIconWa from '../component/FloatWA.svelte';
 
 	setupI18n({ withLocale: 'es' });
 </script>
 
-<FloatWa />
-<Widegt />
-<main>
+<main class="h-auto w-auto">
+	<Widegt />
+	<FloatIconWa />
 	<Header />
 	<slot />
 	<Footer />

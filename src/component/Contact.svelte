@@ -27,8 +27,7 @@
 	min-h-[70vh]
 	bg-no-repeat bg-cover bg-center
 	bg-[url('src/img/bgRajisimas.webp')]
-	bg-white
-	dark:bg-gradient-to-b from-yellow-300 to-yellow-600
+	bg-fixed
 	"
 >
 	<article

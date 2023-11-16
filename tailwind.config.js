@@ -16,7 +16,11 @@ export default {
       alpha: 'lower-alpha',
       'alpha-upper': 'upper-alpha',
     },
-    extend: {}
+    extend: {
+      colors: {
+        'dark-100': '#0F0F0F',
+      },
+    }
   },
   plugins: [
     require('tailwindcss-animated'),

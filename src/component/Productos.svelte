@@ -5,7 +5,7 @@
 	import Machisima2 from '../img/MACHISIMA_150gr.webp';
 	import Machisima3 from '../img/MACHISIMA ARANDANO_150gr.webp';
 	import Arbolisimo from '../img/ARBOLISIMO_340gr.webp';
-
+	
 	import { _ } from 'svelte-i18n';
 
 	var Productos = [
@@ -62,17 +62,19 @@
 
 <section 
 	class="
-		bg-gray-100
 		dark:bg-[#0F0F0F]
+		bg-no-repeat bg-cover bg-center
+		bg-[url('src/img/FondoDesktop.webp')]
+		bg-fixed
 		flex flex-col items-center 
 		gap-14 py-14 px-6
 		[&>div]:animate-fade-up animate-once animate-duration-1000 animate-ease-in
 		first:bg-red-900
 		"
 	>
-	<h2 class="dark:text-white font-bold text-4xl sm:text-5xl p-6 uppercase w-full text-center">
-		{$_('home.title')}
-	</h2>
+		<h2 class="font-bold text-4xl sm:text-5xl p-6 uppercase w-full text-center">
+			{$_('home.title')}
+		</h2>
 
 	{#each Productos as {Nombre, Variantes, nombreDescription}}
 		<article
@@ -81,13 +83,12 @@
 				flex flex-col justify-center items-center
 				rounded-lg
 				shadow-lg
-				bg-yellow-50 shadow-gray-800  
+				bg-gray-200 shadow-gray-800  
 				dark:bg-gray-600 dark:shadow-gray-600
 				min-w-[90vw] md:min-w-[80vw] lg:min-w-[70vw] xl:min-w-[60vw]
 				min-h-[45vh]
 				md:min-h-min
 				efect-fade-up
-				py-4
 			"
 			
 		>
@@ -100,7 +101,6 @@
 					border-y-2 border-black dark:border-white group-hover:backdrop-blur-md group-hover:border-y-2 group-hover:border-black-400
 					transition-all duration-1000 ease-in-out
 					group-hover:-translate-x-[120vw]
-					md:group-hover:-translate-x-[30vw]
 					lg:group-hover:-translate-x-[40vw]
 					group-hover:scale-[1.4]
 				"
@@ -118,21 +118,19 @@
 			</p>
 			<div
 				class="
-					flex 
-					flex-col 
+					flex flex-col 
 					md:flex-row justify-evenly
-					gap-6
-					p-6
+					w-full
+					p-4
 					transition-all duration-1000 ease-in-out opacity-[0.1] group-hover:opacity-[1]
-					
 				"
 			>
 				<!-- Itera sobre los tipos de gramaje y pos ibles variantes -->
 				{#each Variantes as {Gramage, Sabor, Img}}
 					<div class="flex items-center">
-						<img loading="lazy" src={Img} alt="Rajisimas" class="h-40 hover:scale-110 transition-all ease-in-out duration-500" />
+						<img loading="lazy" src={Img} alt="Rajisimas" class="h-44 mx-auto md:hover:scale-110 transition-all ease-in-out duration-500" />
 						{#if Sabor}
-							<div class="flex flex-col [&>p]:m-0">
+							<div class="flex flex-col">
 								<p class="text-slate-700 dark:text-white font-semibold">{$_('home.'+Nombre.toLocaleLowerCase()+Sabor.toLocaleLowerCase())}</p>
 								<p class="text-slate-700 dark:text-white font-semibold">{Gramage}gr</p>
 							</div>

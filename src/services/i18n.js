@@ -72,6 +72,10 @@ function setupI18n({
                     "tittleValues" : "Values",
                     "text" : "JOY • HONESTY • RESPECT • JUSTICE • SOLIDARITY • EXCELLENCE • INNOVATION • TEAMWORK • SOCIAL RESPONSIBILITY"
                 }
+            },
+            "error" : {
+                "PageNotFound" : "Page Not Found",
+                "back" : "Back to Top"
             }
         },
         es: {
@@ -139,6 +143,10 @@ function setupI18n({
                     "tittleValues" : "Valores",
                     "text" : "ALEGRÍA • HONESTIDAD • RESPETO • JUSTICIA • SOLIDARIDAD • EXCELENCIA • INNOVACIÓN • TRABAJO EN EQUIPO • RESPONSABILIDAD SOCIAL" 
                 }
+            },
+            "error" : {
+                "PageNotFound" : "Pagína no encontrada",
+                "back" : "Regresar al inicio"
             }
         }
     });
