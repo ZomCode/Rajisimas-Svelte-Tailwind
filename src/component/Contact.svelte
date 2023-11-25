@@ -28,7 +28,7 @@
 	bg-no-repeat bg-cover bg-center
 	bg-fixed
 	"
-	style="background-image: url('src/img/bgRajisimas.webp');"
+	style="background-image: url('../img/bgRajisimas.webp');"
 >
 	<article
 		class="
