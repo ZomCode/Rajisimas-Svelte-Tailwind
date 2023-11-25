@@ -64,13 +64,15 @@
 	class="
 		dark:bg-[#0F0F0F]
 		bg-no-repeat bg-cover bg-center
-		bg-[url('src/img/FondoDesktop.webp')]
 		bg-fixed
 		flex flex-col items-center 
 		gap-14 py-14 px-6
 		[&>div]:animate-fade-up animate-once animate-duration-1000 animate-ease-in
 		first:bg-red-900
 		"
+	style="
+		background-image: url('src/img/FondoDesktop.webp');
+	"
 	>
 		<h2 class="font-bold text-4xl sm:text-5xl p-6 uppercase w-full text-center">
 			{$_('home.title')}

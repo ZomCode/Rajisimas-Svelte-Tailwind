@@ -26,9 +26,9 @@
     grid items-center
 	min-h-[70vh]
 	bg-no-repeat bg-cover bg-center
-	bg-[url('src/img/bgRajisimas.webp')]
 	bg-fixed
 	"
+	style="background-image: url('src/img/bgRajisimas.webp');"
 >
 	<article
 		class="
