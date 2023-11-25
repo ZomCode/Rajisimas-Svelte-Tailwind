@@ -71,7 +71,7 @@
 		[&>div]:animate-fade-up animate-once animate-duration-1000 animate-ease-in
 		first:bg-red-900
 		"
-	style={[`background-image: url(${FondoDesktop})`]}
+	style={[`background-image: url(../img/FondoDesktop.webp)`]}
 	>
 		<h2 class="font-bold text-4xl sm:text-5xl p-6 uppercase w-full text-center">
 			{$_('home.title')}
