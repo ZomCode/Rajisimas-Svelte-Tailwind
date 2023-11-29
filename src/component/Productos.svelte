@@ -66,7 +66,7 @@
 		dark:bg-[#0F0F0F]
 		bg-no-repeat bg-cover bg-center
 		bg-fixed
-		bg-[url('../img/FondoDesktop.webp')]
+		bg-[url(../img/FondoDesktop.webp)]
 		flex flex-col items-center 
 		gap-14 py-14 px-6
 		[&>div]:animate-fade-up animate-once animate-duration-1000 animate-ease-in

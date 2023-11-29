@@ -1,5 +1,6 @@
 <script>
 	import { _ } from 'svelte-i18n';
+	import imagenDesktop from '../img/FondoDesktop.webp'
 
 	let email = '';
 	let tel = '';
@@ -28,7 +29,7 @@
 	bg-no-repeat bg-cover bg-center
 	bg-fixed
 	"
-	style="background-image: url('../img/bgRajisimas.webp');"
+	style="background-image({imagenDesktop})"
 >
 	<article
 		class="
