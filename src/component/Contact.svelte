@@ -28,8 +28,9 @@
 	min-h-[70vh]
 	bg-no-repeat bg-cover bg-center
 	bg-fixed
+	bg-bgLight1
 	"
-	style={[`background-image: url(${FondoDesktop})`]}
+	
 >
 	<article
 		class="

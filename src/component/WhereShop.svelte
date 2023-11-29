@@ -37,7 +37,7 @@
 	}
 </script>
 
-<div class="flex flex-col items-center drop-shadow-md p-4 w-full shadow-inner efect-fade-up">
+<div class="flex flex-col items-center drop-shadow-md p-4 w-full shadow-inner efect-fade-up bg-bgLight3 bg-no-repeat bg-cover bg-center bg-fixed">
 	<div class="text-3xl font-bold uppercase {colorTitle}">
 		{titleStore}
 	</div>
