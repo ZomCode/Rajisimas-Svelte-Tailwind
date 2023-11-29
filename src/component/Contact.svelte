@@ -29,7 +29,7 @@
 	bg-no-repeat bg-cover bg-center
 	bg-fixed
 	"
-	style="background-image({imagenDesktop})"
+	style={[`background-image: url(${imagenDesktop})`]}
 >
 	<article
 		class="
