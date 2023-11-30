@@ -12,7 +12,8 @@
 	<article
 		class="
             flex flex-col justify-center items-center
-            bg-[url('src/img/bgRajisimas.webp')]
+            bg-bgImgLight2
+			dark:bg-bgImgDark2
             bg-no-repeat bg-cover bg-center
             brightness-100
             min-h-[95vh]
@@ -54,7 +55,7 @@
 
 	<article 
 		class="
-			grid grid-cols-1 gap-4 py-10 px-12 md:px-24
+			grid grid-cols-1 gap-4 py-10 px-12 md:px-24 bg-no-repeat bg-cover bg-center bg-fixed bg-bgImgLight2 dark:bg-bgImgDark2
 			[&>div>figure>img]:max-h-80 dark:text-white text-black
 		"
 	>

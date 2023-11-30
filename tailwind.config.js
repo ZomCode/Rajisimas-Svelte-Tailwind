@@ -23,6 +23,8 @@ export default {
       backgroundImage: {
         'bgImgLight': "url('img/FondoRajisimasL.webp')",
         'bgImgDark': "url('img/FondoRajisimasD.webp')",
+        'bgImgLight2': "url('img/FondoRajL.webp')",
+        'bgImgDark2': "url('img/FondoRajD.webp')",
       }
     }
   },

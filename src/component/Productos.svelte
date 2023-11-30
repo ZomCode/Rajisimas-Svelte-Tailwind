@@ -68,7 +68,7 @@
 				rounded-lg
 				shadow-lg
 				bg-gray-200 shadow-gray-950
-				dark:bg-gray-600 dark:shadow-gray-300
+				dark:bg-[#3F3F3F] dark:shadow-gray-300
 				min-w-[90vw] md:min-w-[80vw] lg:min-w-[70vw] xl:min-w-[60vw]
 				min-h-[45vh]
 				md:min-h-min
@@ -119,9 +119,9 @@
 						class="h-44 md:hover:scale-110 transition-all ease-in-out duration-500 mx-auto"
 					/>
 					{#if Sabor}
-						<div class="flex flex-col absolute right-2 sm:static">
-							<p class="text-slate-700 dark:text-white font-semibold">
-								{@html $_('home.' + Nombre.toLocaleLowerCase() + Sabor.toLocaleLowerCase())}
+						<div class="flex flex-col absolute right-8 sm:static">
+							<p class="text-slate-700 dark:text-white font-semibold"> 
+								{@html $_('home.' + Nombre.toLocaleLowerCase() + Sabor.toLocaleLowerCase())} 
 							</p>
 							<p class="text-slate-700 dark:text-white font-semibold">{Gramage}gr</p>
 						</div>

@@ -87,8 +87,11 @@
 				bind:value={selectedSucursal}
 				on:change={handleSelectChange}
 			>
+				{#if !sucursalesData || sucursalesData.length != 0}
+					<option value="" class="hover:bg-gray-300 rounded-lg" selected>Selecciona alguna sucursal</option>
+				{/if}
 				{#each sucursalesData as { Nombre }}
-					<option value={Nombre} class="hover:bg-gray-300 uppercase">{Nombre}</option>
+					<option value={Nombre} class="hover:bg-gray-300 uppercase rounded-lg">{Nombre}</option>
 				{/each}
 			</select>
 		</div>

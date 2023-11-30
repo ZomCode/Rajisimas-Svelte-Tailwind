@@ -109,7 +109,7 @@ function setupI18n({
                 "rajisimasDescription" : "Rajas de jalapeño, zanahoria, cebolla, especias. Únicas con vinagre de manzana. Receta de nuestra abuela, sin conservadores artificiales.",
                 "machisimaDescription" : "Salsa macha, mezcla de 4 chiles, pepita, cacahuate y ajonjolí. La salsa que va con todo. Sin conservadores artificiales.",
                 "arbolisimoDescription" : "Chile de árbol frito, con especias. Perfecto para acompañar tus caldos. Sin conservadores artificiales.",
-                "machísimaarandano" : "Sabor: Arandano"
+                "machísimaarandano" : "Sabor: <br> Arandano"
             },
             "ContactUs" : {
                 "titleContactUs" : "Contacta con nosotros",
