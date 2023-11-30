@@ -21,9 +21,8 @@ export default {
         'dark-100': '#0F0F0F',
       },
       backgroundImage: {
-        'bgLight1': "url('img/FondoDesktop.webp')",
-        'bgLight2': "url('img/FondoDesktop.webp')",
-        'bgLight3': "url('/img/FondoDesktop.webp')"
+        'bgImgLight': "url('img/FondoRajisimasL.webp')",
+        'bgImgDark': "url('img/FondoRajisimasD.webp')",
       }
     }
   },

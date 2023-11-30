@@ -38,7 +38,7 @@ function setupI18n({
                 "rajisimasDescription" : "Slices of jalapeño, carrot, onion, spices. Uniquely with apple cider vinegar. Our grandmother's recipe, no artificial preservatives.",
                 "machisimaDescription" : "Macha sauce, a blend of 4 chilies, pumpkin seeds, peanuts, and sesame seeds. The sauce that goes with everything. No artificial preservatives.",
                 "arbolisimoDescription" : "Fried árbol chili, with spices. Perfect to accompany your broths. No artificial preservatives.",
-                "machísimaarandano" : "Taste: Blueberry",
+                "machísimaarandano" : "Taste: <br> Blueberry",
             },
             "ContactUs" : {
                 "titleContactUs" : "Contact us",

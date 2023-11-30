@@ -66,7 +66,7 @@
 	<title>Rajísimas | {$_('header.whereshop')}</title>
 </svelte:head>
 
-<section class="flex flex-col items-center md:justify-center gap-y-4 dark:bg-[#0F0F0F] bg-white py-4 ">
+<section class="flex flex-col items-center md:justify-center gap-y-4 dark:bg-[#0F0F0F] bg-white py-4 bg-no-repeat bg-cover bg-center bg-fixed bg-bgImgLight dark:bg-bgImgDark">
 	<article class="h-auto md:h-[100vh] flex flex-col justify-evenly py-4">
 		<h2 class="font-bold text-2xl md:text-4xl text-center dark:text-white text-black mx-8 md:mx-12">
 			{$_('stores.titleSection')}

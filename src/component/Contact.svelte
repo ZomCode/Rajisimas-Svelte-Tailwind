@@ -1,6 +1,5 @@
 <script>
 	import { _ } from 'svelte-i18n';
-	import FondoDesktop from '../img/FondoDesktop.webp'
 
 	let email = '';
 	let tel = '';
@@ -28,7 +27,8 @@
 	min-h-[70vh]
 	bg-no-repeat bg-cover bg-center
 	bg-fixed
-	bg-bgLight1
+	bg-bgImgLight
+	dark:bg-bgImgDark
 	"
 	
 >
@@ -49,7 +49,7 @@
 			"
 		>
 			<!-- <img src={logoRajisimas} alt="Rajisimas" class="h-24" /> -->
-			<h4 class="font-bold- text-4xl text-yellow-50 dark:text-yellow-950">
+			<h4 class="font-bold- text-4xl text-yellow-500 dark:text-yellow-950">
 				{$_('ContactUs.titleContactUs')}
 			</h4>
 		</div>

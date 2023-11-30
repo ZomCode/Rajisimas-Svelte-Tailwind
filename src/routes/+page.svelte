@@ -37,5 +37,26 @@
     <Controls/>
     <Indicators/>
 </Carousel>
-<Productos/>
+<section 
+	class="
+		dark:bg-dark-100
+		bg-no-repeat bg-cover bg-center
+		bg-fixed
+		bg-bgImgLight
+		dark:bg-bgImgDark
+		flex flex-col items-center 
+		gap-14 py-14 px-6
+		[&>div]:animate-fade-up animate-once animate-duration-1000 animate-ease-in
+		first:bg-red-900
+		"
+	>
+		<h2 class="font-bold text-4xl sm:text-5xl p-6 uppercase text-center 
+			text-black dark:text-white
+			rounded-xl"
+		>
+			{$_('home.title')}
+		</h2>
+
+        <Productos/>
+</section>
 <Contact/>
