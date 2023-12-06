@@ -37,12 +37,12 @@
 	}
 </script>
 
-<div class="flex flex-col items-center drop-shadow-md p-4 w-full shadow-inner efect-fade-up">
+<div class="flex flex-col items-center drop-shadow-md p-4 w-full shadow-inner efect-fade-up ">
 	<div class="text-3xl font-bold uppercase {colorTitle}">
 		{titleStore}
 	</div>
 	<div class="grid justify-items-evenly grid-cols-1 md:grid-cols-3 gap-6 w-3/4">
-		<div class="flex flex-col items-center p-4 gap-2 col-span-1 shadow-xl rounded-lg">
+		<div class="flex flex-col items-center p-4 gap-2 col-span-1 shadow-xl rounded-lg bg-black/10">
 			<p class="text-1xl text-slate-500">
 				{sucursalesData.length > 1 ? $_('stores.branches') : $_('stores.branch')}
 			</p>
@@ -95,7 +95,7 @@
 				{/each}
 			</select>
 		</div>
-		<div class="group flex flex-col items-center gap-2 col-span-1 md:col-span-2 shadow-xl rounded-lg p-4 w-full">
+		<div class="group flex flex-col items-center gap-2 col-span-1 md:col-span-2 shadow-xl rounded-lg p-4 w-full bg-black/10">
 			<p class="text-1xl text-slate-500 text-center">{$_('stores.ask')}</p>
 			<div class="flex flex-col justify-evenly items-center rounded-xl h-full w-full">
 				{#if Array.isArray(images) === true}

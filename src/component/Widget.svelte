@@ -21,7 +21,7 @@
 </script>
 
 <div class="fixed z-20 flex p-2 md:p-4 right-4 max-w-min bg-green-600 rounded-b-xl divide-x">
-    <div class="flex items-center px-4">
+    <div class="flex items-center space-x-2 px-2">
         <label class="cursor-pointer">
             <input
                 type="checkbox"
@@ -39,7 +39,7 @@
         <p />
         <span class="text-gray-600 dark:text-gray-300"> {darkMode ? '🌞' : '🌑'}</span>
     </div>
-    <div class="flex items-center space-x-2 px-4">
+    <div class="flex items-center space-x-2 px-2">
         <label class="cursor-pointer">
             <input 
                 type="checkbox" 

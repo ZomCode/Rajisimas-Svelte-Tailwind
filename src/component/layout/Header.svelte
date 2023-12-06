@@ -10,7 +10,7 @@
 	}
 </script>
 
-<nav class="flex justify-between md:justify-around items-center p-8 text-2xl bg-yellow-300 dark:bg-dark-100 dark:border-b border-gray-700">
+<nav class="flex justify-between md:justify-around items-center p-4 md:p-8 text-2xl bg-yellow-300 dark:bg-dark-100 dark:border-b border-gray-700">
 	<div class="flex items-center">
 		<a href="/">
 			<img src={imgLogo} alt="LogoRajisimas" class="h-auto w-24" />
@@ -30,25 +30,26 @@
 		</button>
 	</div>
 
-	<div class="
+	<div 
+		class="
 		hidden md:flex gap-x-4 [&>a]:p-2 font-bold uppercase
 		[&>a]:text-gray-700 hover:[&>a]:text-gray-800 
 		dark:[&>a]:text-yellow-400 dark:hover:[&>a]:text-yellow-500
 		hover:[&>a]:underline hover:[&>a]:underline-offset-4
 		"
 	>
-		<a href="/" class="nav-link">{$_('header.home')}</a>
-		<a href="/whereshop" class="nav-link">{$_('header.whereshop')}</a>
-		<a href="/about" class="nav-link">{$_('header.about')}</a>
+		<a href="/">{$_('header.home')}</a>
+		<a href="/whereshop">{$_('header.whereshop')}</a>
+		<a href="/about">{$_('header.about')}</a>
 	</div>
 </nav>
 
 {#if isMenuOpen}
-	<div class="md:hidden font-bold text-1xl hover:[&>a]:text-white dark:border-b border-gray-700">
-		<div class="flex flex-col space-y-4 p-4 bg-yellow-300 dark:bg-dark-100 [&>a]:text-gray-600 dark:[&>a]:text-yellow-400">
-			<a href="/" class="nav-link" on:click={toggleMenu}>{$_('header.home')}</a>
-			<a href="/whereshop" class="nav-link" on:click={toggleMenu}>{$_('header.whereshop')}</a>
-			<a href="/about" class="nav-link" on:click={toggleMenu}>{$_('header.about')}</a>
+	<div class="md:hidden font-bold text-1xl hover:[&>a]:text-white dark:border-b border-gray-700 w-full">
+		<div class="flex flex-col bg-yellow-300 dark:bg-dark-100 [&>a]:text-gray-600 dark:[&>a]:text-yellow-400 w-full [&>a]:px-4 [&>a]:py-2 [&>a]:border-b [&>a]:border-gray-700">
+			<a href="/" on:click={toggleMenu}>{$_('header.home')}</a>
+			<a href="/whereshop" on:click={toggleMenu}>{$_('header.whereshop')}</a>
+			<a href="/about" on:click={toggleMenu}>{$_('header.about')}</a>
 		</div>
 	</div>
 {/if}

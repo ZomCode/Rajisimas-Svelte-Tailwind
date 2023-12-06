@@ -25,14 +25,14 @@
 			class="
                 flex flex-col justify-center items-center
             	h-full w-full
-                backdrop-brightness-50 backdrop-blur-sm bg-black/30
+                backdrop-brightness-50 backdrop-blur-sm bg-black/10
                 gap-4
                 p-4
             "
 		>
 			<h2
 				class="
-                    text-3xl md:text-7xl text-yellow-300 font-semibold
+                    text-3xl lg:text-7xl text-yellow-300 font-semibold
                 "
 			>
 				Rajísimas
@@ -40,14 +40,27 @@
 			<p
 				class="
                     m-0 w-full md:w-[70vw]
-                    text-base md:text-3xl font-semibold
+                    text-base lg:text-3xl font-semibold
                     text-white
                     text-justify
+					[&>strong]:text-yellow-300
+					[&>em]:text-rose-400
+					gap-y-8
                 "
 			>
-				Rajisimas nació en 2018 con dos jóvenes emprendedores, con la  intención de crear un legado de sabor y tradición alrededor del mundo. Una de las principales claves dentro de este emprendimiento ha sido escuchar a los clientes, quienes han sido un impulso para la mejora continua; fue así que profesionalizaron la marca y se acercaron a diversas dependencias y asociaciones que han apoyado cada paso de Rajisimas. Actualmente se han desarrollado más productos como salsa macha "Machísima" y chile de árbol frito "Arbolísimo", los cuales se han innovado y diversificado en los sabores para conquistar a cada paladar. En este transcurso de años la familia Rajisimas ha ido creciendo y expandiéndose, con pasos firmes y siendo un equipo, porque saben que 
+				<strong>R</strong>ajisimas nació en 2018 con dos jóvenes emprendedores, con la  intención de crear un legado de sabor y tradición alrededor del mundo.
+				<br>
+				<strong>U</strong>na de las principales 
+				claves dentro de este emprendimiento ha sido escuchar a los clientes, quienes han sido un impulso para la mejora continua; fue así que profesionalizaron la marca y 
+				se acercaron a diversas dependencias y asociaciones que han apoyado cada paso de Rajisimas.
+				<br>
+				<strong>A</strong>ctualmente se han desarrollado más productos como salsa macha 
+				<em>"Machísima"</em> y chile de árbol frito <em>"Arbolísimo"</em>, los cuales se han innovado y diversificado en los sabores para conquistar a cada paladar.
+				<br>
+				<strong>E</strong>n este transcurso de 
+				años la familia Rajisimas ha ido creciendo y expandiéndose, contando actualmente con 3 socios activos formando un equipo firme y consolidado convencidos que,
 				<span class="text-yellow-300">
-				"solos podemos llegar más rápido, pero juntos más lejos".
+				Solos podemos llegar más rápido, pero juntos más lejos.
 				</span>
 			</p>
 		</div>
@@ -81,10 +94,10 @@
 				text-left
 				"
 			>
-				<h3 class="text-3xl text-center">
+				<h3 class="text-4xl text-center">
 					{$_('we.mission.tittleMission')}
 				</h3>
-				<p>
+				<p class="text-2xl">
 					{$_('we.mission.text')}
 				</p>
 			</div>
@@ -110,10 +123,10 @@
 				text-right
 				"
 			>
-				<h3 class="text-3xl text-center">
+				<h3 class="text-4xl text-center">
 					{$_('we.vission.tittleVission')}
 				</h3>
-				<p class="text-justify">
+				<p class="text-2xl text-justify">
 					{$_('we.vission.text')}
 				</p>
 			</div>
@@ -136,10 +149,10 @@
 					text-left
 				"
 			>
-				<h3 class="text-3xl text-center">
+				<h3 class="text-4xl text-center">
 					{$_('we.values.tittleValues')}
 				</h3>
-				<p>
+				<p class="text-2xl text-center">
 					{$_('we.values.text')}
 				</p>
 			</div>

@@ -48,8 +48,7 @@
 				flex flex-col items-center text-center py-4
 			"
 		>
-			<!-- <img src={logoRajisimas} alt="Rajisimas" class="h-24" /> -->
-			<h4 class="font-bold- text-4xl text-yellow-500 dark:text-yellow-950">
+			<h4 class="font-bold- text-4xl text-yellow-950 dark:text-yellow-500">
 				{$_('ContactUs.titleContactUs')}
 			</h4>
 		</div>
@@ -62,8 +61,8 @@
 				text-black dark:text-white
 
 				[&>input]:w-full
-				[&>input]:placeholder:text-gray-950 [&>input]:dark:placeholder:text-gray-700
-				[&>textarea]:placeholder:text-slate-900 [&>textarea]:dark:placeholder:text-gray-700
+				[&>input]:placeholder:text-gray-950 [&>input]:dark:placeholder:text-gray-300
+				[&>textarea]:placeholder:text-slate-900 [&>textarea]:dark:placeholder:text-gray-300
 				[&>input]:rounded-lg
 				[&>textarea]:rounded-lg
 
@@ -84,7 +83,7 @@
 				class="
 					bg-transparent p-2
 					border-2
-					border-gray-300
+					border-gray-400
 					hover:border-rose-700
 					focus:outline-none
 					focus:ring
@@ -104,7 +103,7 @@
 				class="
 					bg-transparent p-2
 					border-2
-					border-gray-300
+					border-gray-400
 					hover:border-rose-700
 					focus:outline-none
 					focus:ring
@@ -122,7 +121,7 @@
 				class="
 					bg-transparent p-2
 					border-2
-					border-gray-300
+					border-gray-400
 					hover:border-rose-700
 					focus:outline-none
 					focus:ring
@@ -141,7 +140,7 @@
 				class="
 					bg-transparent p-2
 					border-2
-					border-gray-300
+					border-gray-400
 					hover:border-rose-700
 					focus:outline-none
 					focus:ring
@@ -159,7 +158,7 @@
 				class="
 					bg-transparent p-2
 					border-2
-					border-gray-300
+					border-gray-400
 					hover:border-rose-700
 					focus:outline-none
 					focus:ring
