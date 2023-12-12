@@ -52,12 +52,13 @@ function setupI18n({
                 'titleSection' : "We have a great Chain of Self-Service Stores",
                 "titlePhysicalStores" : "Physical stores",
                 "titleOnlineStores" : "Online stores",
-                "branch" : "Branch",
-                "branches" : "Branches",
+                "branch" : "Location",
+                "branches" : "Locations",
                 "ask" : "What you can find here?",
                 "waiting" : "Waiting for an option",
-                "branchName" : "Branch Name",
-                "buy" : "Buy"
+                "branchName" : "Location Name",
+                "buy" : "Buy",
+                "selectBranch" : "Select a location"
             },
             "we" : {
                 "about" : {
@@ -109,7 +110,7 @@ function setupI18n({
                 "contactInfo" : {
                     "location" : "Ubicación",
                     "phone" : "Télefono",
-                    "email" : "Correo electrónico "
+                    "email" : "Correo electrónico"
                 },
                 "rights" : "Todos los derechos reservados"
             },
@@ -137,7 +138,8 @@ function setupI18n({
                 "ask" : "¿Que puedes encontrar aquí?",
                 "waiting" : "Esperando una opción",
                 "branchName" : "Nombre Sucursal",
-                "buy" : "Comprar"
+                "buy" : "Comprar",
+                "selectBranch" : "Selecciona alguna sucursal"
             },
             "we" : {
                 "about" : {

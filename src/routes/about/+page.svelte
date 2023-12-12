@@ -90,7 +90,7 @@
 				<h3 class="text-4xl text-center">
 					{$_('we.mission.tittleMission')}
 				</h3>
-				<p class="text-2xl">
+				<p class="text-2xl text-center">
 					{$_('we.mission.text')}
 				</p>
 			</div>
@@ -119,7 +119,7 @@
 				<h3 class="text-4xl text-center">
 					{$_('we.vission.tittleVission')}
 				</h3>
-				<p class="text-2xl text-justify">
+				<p class="text-2xl text-center">
 					{$_('we.vission.text')}
 				</p>
 			</div>

@@ -88,7 +88,7 @@
 				on:change={handleSelectChange}
 			>
 				{#if !sucursalesData || sucursalesData.length != 0}
-					<option value="" class="hover:bg-gray-300 rounded-lg" selected>Selecciona alguna sucursal</option>
+					<option value="" class="hover:bg-gray-300 rounded-lg uppercase" selected>{$_('stores.selectBranch')}</option>
 				{/if}
 				{#each sucursalesData as { Nombre }}
 					<option value={Nombre} class="hover:bg-gray-300 uppercase rounded-lg">{Nombre}</option>
