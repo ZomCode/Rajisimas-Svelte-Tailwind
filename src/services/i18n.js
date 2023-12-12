@@ -60,6 +60,15 @@ function setupI18n({
                 "buy" : "Buy"
             },
             "we" : {
+                "about" : {
+                    "Line1" : "<strong>R</strong>ajisimas was founded in 2018 by two young entrepreneurs with the intention of creating a legacy of flavor and tradition around the world."
+                    ,
+                    "Line2" : "<strong>O</strong>ne of the key factors in this venture has been listening to customers, who have been a driving force for continuous improvement. As a result, the brand was professionalized and they approached various government agencies and associations that have supported every step of Rajisimas."
+                    ,
+                    "Line3" : "<strong>C</strong>urrently, more products have been developed, such as the <em>'Machísima'</em> macha sauce and the <em>'Arbolísimo'</em> fried chili tree. These products have been innovative and diversified in their flavors to appeal to every palate."
+                    ,
+                    "Line4" : "<strong>O</strong>ver the years, the Rajisimas family has grown and expanded, currently counting with 3 active partners forming a strong and consolidated team convinced that, <span class='text-yellow-300'>'Alone we can go faster, but together we can go further.'</span>"
+                },
                 "mission" : {
                     "tittleMission" : "Mision",
                     "text" : "Create healthy food products with great taste and tradition, making people's lives easier, integrating sustainable practices for our planet, based on a social economy model."
@@ -71,12 +80,12 @@ function setupI18n({
                 "values" : {
                     "tittleValues" : "Values",
                     "text" : "JOY • HONESTY • RESPECT • JUSTICE • SOLIDARITY • EXCELLENCE • INNOVATION • TEAMWORK • SOCIAL RESPONSIBILITY"
-                }
+                },
             },
             "error" : {
                 "PageNotFound" : "Page Not Found",
                 "back" : "Back to Top"
-            }
+            },
         },
         es: {
             "header": {
@@ -131,6 +140,15 @@ function setupI18n({
                 "buy" : "Comprar"
             },
             "we" : {
+                "about" : {
+                    "Line1" : "<strong>R</strong>ajisimas nació en 2018 con dos jóvenes emprendedores, con la  intención de crear un legado de sabor y tradición alrededor del mundo."
+                    ,
+                    "Line2" : "<strong>U</strong>na de las principales claves dentro de este emprendimiento ha sido escuchar a los clientes, quienes han sido un impulso para la mejora continua; fue así que profesionalizaron la marca y se acercaron a diversas dependencias y asociaciones que han apoyado cada paso de Rajisimas."
+                    ,
+                    "Line3" : "<strong>A</strong>ctualmente se han desarrollado más productos como salsa macha <em>'Machísima'</em> y chile de árbol frito <em>'Arbolísimo'</em>, los cuales se han innovado y diversificado en los sabores para conquistar a cada paladar."
+                    ,
+                    "Line4" : "<strong>E</strong>n este transcurso de años la familia Rajisimas ha ido creciendo y expandiéndose, contando actualmente con 3 socios activos formando un equipo firme y consolidado convencidos que, <span class='text-yellow-300'>'Solos podemos llegar más rápido, pero juntos más lejos.'</span>"
+                },
                 "mission" : {
                     "tittleMission" : "Misión",
                     "text" : "Crear productos alimenticios saludables con gran sabor y tradición, facilitando la vida de las personas, integrando prácticas sostenibles para nuestro planeta, basándonos en un modelo de economía social."

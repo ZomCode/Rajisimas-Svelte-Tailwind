@@ -48,20 +48,13 @@
 					gap-y-8
                 "
 			>
-				<strong>R</strong>ajisimas nació en 2018 con dos jóvenes emprendedores, con la  intención de crear un legado de sabor y tradición alrededor del mundo.
+				{@html $_('we.about.Line1')}
 				<br>
-				<strong>U</strong>na de las principales 
-				claves dentro de este emprendimiento ha sido escuchar a los clientes, quienes han sido un impulso para la mejora continua; fue así que profesionalizaron la marca y 
-				se acercaron a diversas dependencias y asociaciones que han apoyado cada paso de Rajisimas.
+				{@html $_('we.about.Line2')}
 				<br>
-				<strong>A</strong>ctualmente se han desarrollado más productos como salsa macha 
-				<em>"Machísima"</em> y chile de árbol frito <em>"Arbolísimo"</em>, los cuales se han innovado y diversificado en los sabores para conquistar a cada paladar.
+				{@html $_('we.about.Line3')}
 				<br>
-				<strong>E</strong>n este transcurso de 
-				años la familia Rajisimas ha ido creciendo y expandiéndose, contando actualmente con 3 socios activos formando un equipo firme y consolidado convencidos que,
-				<span class="text-yellow-300">
-				Solos podemos llegar más rápido, pero juntos más lejos.
-				</span>
+				{@html $_('we.about.Line4')}
 			</p>
 		</div>
 	</article>

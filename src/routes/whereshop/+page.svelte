@@ -101,7 +101,7 @@
 				Mercado Libre
 			</h5>
 			<div class="grid justify-items-evenly grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-3/4 h-auto">
-				<div class="flex justify-center items-center gap-2 col-span-1 md:col-span-2 lg:md:col-span-1 shadow-xl rounded-xl p-4">
+				<div class="flex justify-center items-center gap-2 col-span-1 md:col-span-2 lg:md:col-span-1 shadow-xl rounded-xl p-4 bg-black/10">
 					<a
 						href="https://rajisimas.mercadoshops.com.mx/"
 						target="_blank"
@@ -121,7 +121,7 @@
 						{$_('stores.buy')}
 					</a>
 				</div>
-				<div class="flex flex-col items-center gap-2 col-span-1 md:col-span-2 shadow-xl rounded-lg w-full">
+				<div class="flex flex-col items-center gap-2 col-span-1 md:col-span-2 shadow-xl rounded-lg w-full bg-black/10">
 					<p class="text-1xl text-slate-500 text-center py-4">
 						{$_('stores.ask')}
 					</p>
@@ -129,7 +129,6 @@
 						class="
 							grid grid-cols-2 md:grid-cols-3 place-content-around place-items-center gap-2 md:gap-4 
 							rounded-xl
-							[&>img]:w-32 sm:[&>img]:min-h-40
 							animate-fade animate-once animate-ease-linear 
 							py-4 w-full
 							"
