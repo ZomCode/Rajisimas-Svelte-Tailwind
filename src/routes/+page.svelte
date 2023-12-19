@@ -7,18 +7,24 @@
 
     import imgShowSlider1 from '../img/Rajisimas1.webp';
 	import imgShowSlider2 from '../img/Arbolisimo1.webp';
+    import imgShowSlider3 from '../img/Image2.webp';
 
 
     const images = [
         {
-            alt: 'Cosmic timetraveler',
+            alt: 'Imagen de Rajísimas',
             src: imgShowSlider1,
-            title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
+            title: 'Rajísimas Tradición con sabor'
         },
         {
-            alt: 'Cosmic timetraveler 2',
+            alt: 'Imagen de Arbolísimo',
             src: imgShowSlider2,
-            title: 'cosmic-timetraveler-pYyOZ8q7AII-unsplash.com'
+            title: 'Rajísimas Tradición con sabor'
+        },
+        {
+            alt: 'Imagen de Arbolísimo',
+            src: imgShowSlider3,
+            title: 'Rajísimas Tradición con sabor'
         }
     ];
 </script>

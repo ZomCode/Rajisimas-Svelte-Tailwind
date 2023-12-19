@@ -39,8 +39,8 @@
 		"
 	>
 		<a href="/">{$_('header.home')}</a>
-		<a href="/whereshop">{$_('header.whereshop')}</a>
-		<a href="/about">{$_('header.about')}</a>
+		<a href="/donde-comprar">{$_('header.whereshop')}</a>
+		<a href="/acerca-de">{$_('header.about')}</a>
 	</div>
 </nav>
 
@@ -48,8 +48,8 @@
 	<div class="md:hidden font-bold text-1xl hover:[&>a]:text-white dark:border-b border-gray-700 w-full">
 		<div class="flex flex-col bg-yellow-300 dark:bg-dark-100 [&>a]:text-gray-600 dark:[&>a]:text-yellow-400 w-full [&>a]:px-4 [&>a]:py-2 [&>a]:border-b [&>a]:border-gray-700">
 			<a href="/" on:click={toggleMenu}>{$_('header.home')}</a>
-			<a href="/whereshop" on:click={toggleMenu}>{$_('header.whereshop')}</a>
-			<a href="/about" on:click={toggleMenu}>{$_('header.about')}</a>
+			<a href="/donde-comprar" on:click={toggleMenu}>{$_('header.whereshop')}</a>
+			<a href="/acerca-de" on:click={toggleMenu}>{$_('header.about')}</a>
 		</div>
 	</div>
 {/if}

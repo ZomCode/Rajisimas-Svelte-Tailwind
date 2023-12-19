@@ -1,7 +1,7 @@
 <script>
 	import LetrasR from '../../img/Letras.png';
-	import FloatWa from '../FloatWA.svelte'
 	import { _ } from '../../services/i18n'
+    const fecha = new Date();
 </script>
 <footer class="p-4 bg-gradient-to-b bg-gray-300 sm:p-6 dark:bg-dark-100 dark:border-t border-gray-700">
     <div class="mx-auto max-w-screen-xl">
@@ -9,7 +9,6 @@
             <div class="mb-6 md:mb-0">
                 <a href="/" class="flex items-center">
                     <img src={LetrasR} class="mr-3 h-8 md:h-14" alt="FlowBite Logo" />
-                    <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Rajísimas</span> -->
                 </a>
             </div>
             <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
@@ -20,10 +19,10 @@
                             <a href="/" class="hover:underline">{$_('footer.sections.home')}</a>
                         </li>
                         <li>
-                            <a href="/whereshop" class="hover:underline">{$_('footer.sections.whereshop')} </a>
+                            <a href="/donde-comprar" class="hover:underline">{$_('footer.sections.whereshop')} </a>
                         </li>
 						<li>
-                            <a href="/about" class="hover:underline">{$_('footer.sections.about')} </a>
+                            <a href="/acerca-de" class="hover:underline">{$_('footer.sections.about')} </a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +56,7 @@
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-gray-800 sm:text-center dark:text-gray-400">© 2022-2023 Rajísimas. {$_('footer.rights')}.
+            <span class="text-sm text-gray-800 sm:text-center dark:text-gray-400">© 2022-{fecha.getFullYear()} Rajísimas. {$_('footer.rights')}.
             </span>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                 <a href="https://www.facebook.com/Rajisimasconsabor" class="text-blue-600 hover:text-blue-700 dark:hover:text-white">

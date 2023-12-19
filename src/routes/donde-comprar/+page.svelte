@@ -138,7 +138,7 @@
 						<img loading="lazy" src={Machisima1} alt={Machisima1} />
 						<img loading="lazy" src={Machisima2} alt={Machisima2} />
 						<img loading="lazy" src={Machisima3} alt={Machisima3} />
-						<img loading="lazy" src={Arbolisimo} alt={Arbolisimo} />
+						<img loading="lazy" src={Arbolisimo} alt={Arbolisimo} class="h-[120%] w-auto"/>
 					</div>
 				</div>
 			</div>

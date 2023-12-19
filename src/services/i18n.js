@@ -87,6 +87,63 @@ function setupI18n({
                 "PageNotFound" : "Page Not Found",
                 "back" : "Back to Top"
             },
+            "privacyPolicies" : {
+                "MainParagraph" : "Thank you for visiting www.rajisimas.com. Your privacy is important to us, and we are committed to protecting your personal data. <br> This Privacy Policy describes how we collect, use, and share the information we collect from users of our website.",
+                "TitleH3" : "Information We Collect",
+
+                "firstH4" : "Personal Information",
+                "firstP" : "We may collect personal information that you voluntarily provide, such as your name, email address, phone number, and other similar information when you interact with our website, such as by subscribing to our newsletter, registering on our site, or filling out online forms.",
+                
+                "secondH4" : "Registration Information",
+                "secondP" : "When you visit our website, our servers may automatically collect certain log information, such as your IP address, browser type, Internet service provider, pages you visit, and the date and time of your visit. This information is used to improve the functionality and performance of our website.",
+                
+                "thirdH4" : "How We Use Your Information",
+                "thirdP" : "We use the information we collect for the following purposes:",
+                "thirdList" : {
+                    "firstLi" : "Provide and improve our services: We use your personal information to provide you with access to our website and improve its functionality and content.",
+                    "secondLi" : "Communication: We may use your email address to send you information about our products, promotions, and updates.",
+                    "thirdLi" : "Analytics: We use log information and cookie data to analyze trends, administer the website, and gather demographic information about our users."
+                },
+
+                "fourthH4" : "How We Share Your Information",
+                "fourthP" : "We will not share your personal information with third parties without your consent, unless we are legally required to do so.",
+                
+                "fifthH4" : "Your Privacy Rights",
+                "fifthP" : "You have certain rights in relation to your personal data, including the right to access, correct, delete, or limit the use of your personal information. If you wish to exercise any of these rights, please contact us using the contact information provided below.",
+                
+                "sixthH4" : "Changes to this Privacy Policy",
+                "sixthP" : "We may update this Privacy Policy from time to time to reflect changes in our data collection and use practices. We encourage you to review this policy regularly to stay informed about how we protect your information.",
+                
+                "seventhH4" : "Questions and Comments",
+                "seventhP" : "If you have questions or comments about this Privacy Policy, please contact us using the following information: <a href='mailto:rajisimasconsabor@gmail.com' class='text-green-600 font-bold border-b hover:border-b-2 border-green-700'> rajisimasconsabor@gmail.com </a> <br> 221 515 6962 <br> Thank you for trusting www.rajisimas.com. We value and respect your privacy."
+            },
+            "termsOfUse" : {
+                "firstH3" : "Use of the Site",
+                "firstLo" : {
+                    "firstLi" : "By accessing the Site, you agree that you will use the content and information provided only for lawful purposes and in accordance with these Terms of Use.",
+                    "secondLi" : "You may not use the Site in a manner that could damage, disable, overburden, or impair the operation of the Site or interfere with other users' use and enjoyment.",
+                },
+
+                "secondH3" : "Content and Intellectual Property",
+                "secondLo" : {
+                    "firstLi" : "All content, text, graphics, logos, images, videos, and other materials available on the Site are protected by copyright or other intellectual property laws. All rights reserved.",
+                    "secondLi" : "You are not permitted to copy, modify, distribute, transmit, display, sell, or otherwise use the content of the Site without the prior written consent of the owners of the Site.",
+                },
+                "thirdH3" : "Third Party Links",
+                "thirdP" : "The Site may contain links to third-party websites. These links are provided solely as a convenience to you. We have no control over the content of these third-party websites and are not responsible for their content or any damage or loss you may suffer from using them. Access to these third-party websites is at your own risk.",
+
+                "forthH3" : "Modifications and Termination",
+                "forthP" : "We reserve the right to modify or discontinue the Site or any portion of it at any time, with or without notice. We may also change these Terms of Use at any time. It is your responsibility to periodically review these terms to be aware of modifications.",
+
+                "fifthH3" : "Limitation of Liability",
+                "fifthP" : "To the fullest extent permitted by applicable law, the Site and its owners shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use the Site.",
+
+                "sixthH3" : "Jurisdiction and Applicable Law",
+                "sixthP" : "These Terms of Use are governed by the laws of Mexico, and any dispute relating to these terms shall be submitted to the exclusive jurisdiction of the courts of Puebla, Pue.",
+                
+                "seventhH3" : "Contact",
+                "seventhP" : "If you have any questions or comments about these Terms of Use, please contact us via",
+            }
         },
         es: {
             "header": {
@@ -119,7 +176,7 @@ function setupI18n({
                 "rajisimasDescription" : "Rajas de jalapeño, zanahoria, cebolla, especias. Únicas con vinagre de manzana. Receta de nuestra abuela, sin conservadores artificiales.",
                 "machisimaDescription" : "Salsa macha, mezcla de 4 chiles, pepita, cacahuate y ajonjolí. La salsa que va con todo. Sin conservadores artificiales.",
                 "arbolisimoDescription" : "Chile de árbol frito, con especias. Perfecto para acompañar tus caldos. Sin conservadores artificiales.",
-                "machísimaarandano" : "Sabor: <br> Arandano"
+                "machísimaarandano" : "Sabor: <br> Arándano"
             },
             "ContactUs" : {
                 "titleContactUs" : "Contacta con nosotros",
@@ -167,6 +224,63 @@ function setupI18n({
             "error" : {
                 "PageNotFound" : "Pagína no encontrada",
                 "back" : "Regresar al inicio"
+            },
+            "privacyPolicies" : {
+                "MainParagraph" : "Gracias por visitar www.rajisimas.com. Tu privacidad es importante para nosotros, y nos comprometemos a proteger tus datos personales. <br> Esta Política de Privacidad describe cómo recopilamos, utilizamos y compartimos la información que recopilamos de los usuarios de nuestro sitio web.",
+                "TitleH3" : "Información que recopilamos",
+
+                "firstH4" : "Información Personal",
+                "firstP" : "Podemos recopilar información personal que tú proporcionas de manera voluntaria, como tu nombre, dirección de correo electrónico, número de teléfono y otra información similar cuando interactúas con nuestro sitio web, como al suscribirte a nuestro boletín, registrarte en nuestro sitio o completar formularios en línea.",
+                
+                "secondH4" : "Información de Registro",
+                "secondP" : "Cuando visitas nuestro sitio web, nuestros servidores pueden recopilar automáticamente cierta información de registro, como tu dirección IP, tipo de navegador, proveedor de servicios de Internet, páginas que visitas y la fecha y hora de tu visita. Esta información se utiliza para mejorar la funcionalidad y el rendimiento de nuestro sitio web.",
+                
+                "thirdH4" : "Cómo Utilizamos tu Información",
+                "thirdP" : "Utilizamos la información que recopilamos para los siguientes fines:",
+                "thirdList" : {
+                    "firstLi" : "Proporcionar y mejorar nuestros servicios: Utilizamos tu información personal para proporcionarte acceso a nuestro sitio web y mejorar su funcionalidad y contenido.",
+                    "secondLi" : "Comunicación: Podemos utilizar tu dirección de correo electrónico para enviarte información sobre nuestros productos, promociones y actualizaciones.",
+                    "thirdLi" : "Análisis: Utilizamos información de registro y datos de cookies para analizar tendencias, administrar el sitio web y recopilar información demográfica sobre nuestros usuarios."
+                },
+
+                "fourthH4" : "Cómo Compartimos tu Información",
+                "fourthP" : "No compartiremos tu información personal con terceros sin tu consentimiento, a menos que estemos legalmente obligados a hacerlo.",
+                
+                "fifthH4" : "Tus Derechos de Privacidad",
+                "fifthP" : "Tienes ciertos derechos en relación con tus datos personales, incluido el derecho a acceder, corregir, eliminar o limitar el uso de tu información personal. Si deseas ejercer alguno de estos derechos, contáctanos a través de la información de contacto proporcionada a continuación.",
+                
+                "sixthH4" : "Cambios en esta Política de Privacidad",
+                "sixthP" : "Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestras prácticas de recopilación y uso de datos. Te recomendamos que revises esta política regularmente para estar informado sobre cómo protegemos tu información.",
+                
+                "seventhH4" : "Preguntas y Comentarios",
+                "seventhP" : "Si tienes preguntas o comentarios sobre esta Política de Privacidad, contáctanos a través de la siguiente información: <a href='mailto:rajisimasconsabor@gmail.com' class='text-green-600 font-bold border-b hover:border-b-2 border-green-700'> rajisimasconsabor@gmail.com </a> <br> 221 515 6962 <br> Gracias por confiar en www.rajisimas.com. Valoramos y respetamos tu privacidad."
+            },
+            "termsOfUse" : {
+                "firstH3" : "Uso del Sitio",
+                "firstLo" : {
+                    "firstLi" : "Al acceder al Sitio, aceptas que utilizarás el contenido y la información proporcionada solo con fines legales y de acuerdo con estos Términos de Uso.",
+                    "secondLi" : "No está permitido utilizar el Sitio de manera que pueda dañar, deshabilitar, sobrecargar o perjudicar el funcionamiento del Sitio o interferir con el uso y disfrute de otros usuarios.",
+                },
+
+                "secondH3" : "Contenido y Propiedad Intelectual",
+                "secondLo" : {
+                    "firstLi" : "Todo el contenido, textos, gráficos, logotipos, imágenes, videos y otros materiales disponibles en el Sitio están protegidos por derechos de autor u otras leyes de propiedad intelectual. Todos los derechos están reservados.",
+                    "secondLi" : "No tienes permiso para copiar, modificar, distribuir, transmitir, mostrar, vender o usar de cualquier manera el contenido del Sitio sin el consentimiento previo por escrito de los propietarios del Sitio.",
+                },
+                "thirdH3" : "Enlaces a terceros",
+                "thirdP" : "El Sitio puede contener enlaces a sitios web de terceros. Estos enlaces son proporcionados únicamente para tu conveniencia. No tenemos control sobre el contenido de estos sitios web de terceros y no somos responsables de su contenido o de cualquier daño o pérdida que puedas sufrir al utilizarlos. El acceso a estos sitios web de terceros es bajo tu propio riesgo.",
+
+                "forthH3" : "Modificaciones y Terminación",
+                "forthP" : "Nos reservamos el derecho de modificar o suspender el Sitio o cualquier parte de él en cualquier momento, con o sin previo aviso. También podemos cambiar estos Términos de Uso en cualquier momento. Es tu responsabilidad revisar periódicamente estos términos para estar al tanto de las modificaciones.",
+
+                "fifthH3" : "Limitación de Responsabilidad",
+                "fifthP" : "En la medida en que lo permita la ley aplicable, el Sitio y sus propietarios no serán responsables por ningún daño directo, indirecto, incidental, especial o consecuente que resulte del uso o la imposibilidad de uso del Sitio.",
+
+                "sixthH3" : "Jurisdicción y Ley Aplicable",
+                "sixthP" : "Estos Términos de Uso se rigen por las leyes del México, y cualquier disputa relacionada con estos términos se someterá a la jurisdicción exclusiva de los tribunales de Puebla, Pue.",
+                
+                "seventhH3" : "Contacto",
+                "seventhP" : "Si tienes alguna pregunta o comentario sobre estos Términos de Uso, por favor contáctanos a través de",
             }
         }
     });
